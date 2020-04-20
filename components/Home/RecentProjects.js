@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
-import 'react-image-lightbox/style.css';
 import dynamic from 'next/dynamic';
 import dscLogoProjectImage from "../../images/dsc-logo-project.png"
 

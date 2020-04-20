@@ -1,5 +1,8 @@
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/icofont.min.css';
+import '../node_modules/react-modal-video/scss/modal-video.scss';
+import 'react-image-lightbox/style.css';
+import 'react-accessible-accordion/dist/fancy-example.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
 import '../assets/css/animate.css';
@@ -15,14 +18,6 @@ import Loader from '../components/Shared/Loader';
 
 export default withRedux(initStore)(
     class MyApp extends App {
-        
-        static async getInitialProps ({ Component, ctx }) {
-            return {
-                pageProps: Component.getInitialProps
-                    ? await Component.getInitialProps(ctx)
-                    : {}
-            }
-        }
 
         render () {
             const { Component, pageProps, store } = this.props
