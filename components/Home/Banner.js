@@ -44,7 +44,7 @@ class Banner extends React.Component {
                                                 students and to create a community which help solve the different issues
                                                 which are faced around our locality.</p>
 
-                                            <Link href="#">
+                                            <Link href="/">
                                                 <a className="btn btn-primary">Join DSC VJIT</a>
                                             </Link>
 
@@ -73,13 +73,13 @@ class Banner extends React.Component {
                                     <div className="col-lg-6 col-md-12">
                                         <div className="marketing-image">
                                             <img
-                                                src={require('../../images/Home_1.png')}
+                                                src={'../../images/home.png'}
                                                 className="wow fadeInDown"
                                                 data-wow-delay="0.4s"
                                                 alt="img"
                                             />
                                             <img
-                                                src={require('../../images/Home_1.png')}
+                                                src={'../../images/home.png'}
                                                 className="wow fadeInLeft"
                                                 data-wow-delay="0.4s"
                                                 alt="img"
