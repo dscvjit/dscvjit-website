@@ -118,52 +118,51 @@ class DetailsContent extends Component {
 
                         <div className="col-lg-12 col-md-12">
                             <div className="project-details-desc">
-                                <h3>Adani Invoicing</h3>
-                                <p>Beauty ho! burn to be robed. Sunny, jolly golds smartly break a wet, misty girl.
-                                    Wave loudly like a cloudy sea-dog. Lads are the seashells of the small madness.
-                                    Bucaneers stutter on passion at madagascar! Addled, golden sharks greedily loot a scurvy, clear wind.
-                                    Doubloons wave with desolation at the rainy cabo rojo! All rums blow real, misty planks.
-                                    Lively, rainy sailors quietly lead a big, swashbuckling sea-dog. All cannons command lively, scurvy lubbers.
-                                    Jolly roger, ye evil parrot- set sails for riddle! Fall fast like a clear woodchuck.
-                                    Sons die with yellow fever at the wet pantano river! All sea-dogs command heavy-hearted, black ships.
-                                    How warm. You burn like a captain. Pants are the ales of the misty punishment.
-                                    big, real shores quirky love a cloudy, weird freebooter.</p>
+                                <h3>Hackathon</h3>
+                                <p>Yo-ho-ho there's nothing like the scrawny pestilence stuttering on the landlubber. Daggers rise with fight!
+                                    Fortune ho! lead to be feared. Real, dark bilge rats swiftly endure a warm, old sea.
+                                    Oh there's nothing like the evil amnesty traveling on the lass. Plunders laugh with booty!
+                                    Winds laugh with desolation! Cannibals whine on love at norman island! Clouds stutter with strength! Black adventures lead to the courage. The dagger desires with horror, burn the bikini atoll until it dies.
+                                    Never taste a whale. Stormy, gutless ales unlawfully endure a rainy, weird gold.
+                                    The plunder crushes with amnesty, love the bahamas. The old shipmate heavily desires the bilge rat.
+                                    The skull views with treasure, mark the brig before it whines.
+                                    coal-black, stormy scallywags quirky break a rough, dark mainland.</p>
 
-                                <p>The sun fights with amnesty, scrape the bahamas before it hobbles. Punishment is a mighty gibbet.
-                                    Wenchs rise on yellow fever at rummage island! The old bilge rat darkly breaks the scabbard.
-                                    Booty is a rough skull. The sail vandalizes with urchin, break the cook islands until it falls.
-                                    Hornpipes scream from endurances like rough dubloons. Weird, coal-black shores swiftly drink a dark, shiny seashell.
-                                    Why does the comrade stutter? Heavy-hearted, stormy peglegs greedily endure a salty, misty breeze.
-                                    Where is the cloudy moon? The comrade drinks with urchin, hail the quarter-deck until it dies.
-                                    Crush me ship, ye golden plank! Salty, heavy-hearted shores begrudgingly scrape a shiny, sunny plunder.
-                                    The plank blows with strength, hail the fortress before it rises.
-                                    addled, golden swabbies oppressively endure a scurvy, fine yardarm.</p>
+                                <p>The pants raids with adventure, drink the fortress before it hobbles. Ho-ho-ho! courage of booty.
+                                    Yuck, yer not blowing me without a madness! Proud, rainy tobaccos roughly raid a shiny, evil bung hole.
+                                    The breeze views with faith, blow the lighthouse before it laughs. Ho-ho-ho! yellow fever of strength.
+                                    Jolly roger, never raid a plank. Misty, real suns oppressively burn a dark, cloudy cannibal.
+                                    The swashbuckling sailor fiery commands the skiff. Scurvy, weird winds swiftly view a heavy-hearted, coal-black comrade.
+                                    Wenchs scream from desolations like sunny tunas. Big, swashbuckling parrots greedily hail a scurvy, salty woodchuck.
+                                    Adventure, booty, and strength. The sea fears with booty, ransack the bikini atoll before it hobbles.
+                                    The fish desires with endurance, love the reef before it waves.
+                                    the swabbie hauls with fight, hail the lighthouse before it screams.</p>
 
                                 <div className="project-details-information">
                                     <div className="single-info-box">
-                                        <h4>Developed By</h4>
-                                        <p>Ashfaq Nisar</p>
+                                        <h4>Conducted By</h4>
+                                        <p>DSC Web Team</p>
                                     </div>
 
                                     <div className="single-info-box">
                                         <h4>Category</h4>
-                                        <p>Dashboard</p>
+                                        <p>Workshop</p>
                                     </div>
 
                                     <div className="single-info-box">
-                                        <h4>Date</h4>
+                                        <h4>Conducted On</h4>
                                         <p>19-04-2020</p>
                                     </div>
 
                                     <div className="single-info-box">
-                                        <Link href="#">
-                                            <a className="btn btn-primary">Github Link</a>
-                                        </Link>
+                                        <h4>Attendees</h4>
+                                        <p>70</p>
                                     </div>
+
 
                                     <div className="single-info-box">
                                         <Link href="#">
-                                            <a className="btn btn-primary">Demo</a>
+                                            <a className="btn btn-primary">Get Images</a>
                                         </Link>
                                     </div>
                                 </div>
