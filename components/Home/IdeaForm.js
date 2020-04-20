@@ -12,17 +12,13 @@ class IdeaForm extends Component {
                                 <div className={"bar"}/>
                                 <p>The points/rules for the brainstorming : </p>
                                 <ul>
-                                    <li>If Google can’t crawl your site, it’s not going to rank – but that doesn’t mean
-                                        avoiding Javascript.
+                                    <li>First Rule
                                     </li>
-                                    <li>For businesses which sell products online and and improve their product listings
-                                        in the search results.
+                                    <li>Second Rule
                                     </li>
-                                    <li>If you’re investing in a new website it’s important to ensure it’s built to
-                                        succeed in the search results too.
+                                    <li>Third Rule
                                     </li>
-                                    <li>If Google can’t crawl your site, it’s not going to rank – but that doesn’t mean
-                                        avoiding Javascript.
+                                    <li>Fourth Rule
                                     </li>
                                 </ul>
                             </div>
@@ -30,7 +26,6 @@ class IdeaForm extends Component {
 
                         <div className="col-lg-6 col-md-12">
                             <div className="analysis-form">
-                                {/*<h3></h3>*/}
                                 <form>
                                     <div className="form-group">
                                         <input type="text" placeholder="Name*" className="form-control"/>
