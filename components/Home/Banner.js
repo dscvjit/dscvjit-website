@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import ModalVideo from 'react-modal-video';
-import '../../node_modules/react-modal-video/scss/modal-video.scss';
 
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
