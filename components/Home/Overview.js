@@ -9,7 +9,7 @@ class Overview extends Component {
                     <div className="overview-box">
                         <div className="row h-100 justify-content-center align-items-center">
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src={require('../../images/marketing-1.png')} alt="image" />
+                                <img src='../../images/home-what.png' alt="image" />
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-content">
@@ -43,7 +43,7 @@ class Overview extends Component {
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src={require('../../images/marketing-2.png')} alt="image" />
+                                <img src={'../../images/home-why.png'} alt="image" />
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ class Overview extends Component {
                     <div className="overview-box">
                         <div className="row h-100 justify-content-center align-items-center">
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src={require('../../images/marketing.png')} alt="image" />
+                                <img src={'../../images/home-last.png'} alt="image" />
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-content">
