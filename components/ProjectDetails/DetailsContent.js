@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import Lightbox from 'react-image-lightbox';
-import '../../node_modules/react-modal-video/css/modal-video.min.css';
-import 'react-image-lightbox/style.css';
 import dscLogoProjectImage from "../../images/dsc-logo-project.png"
 
 const images = [

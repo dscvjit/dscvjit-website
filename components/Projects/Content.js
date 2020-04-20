@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
 import dscLogoProject from '../../images/dsc-logo-project.png'
-
-
-
 
 class Content extends Component {
 
