@@ -15,7 +15,8 @@ class Footer extends Component {
                                         <img src={dscLogo} alt="logo"/>
                                     </a>
                                 </Link>
-                                <p>Someone needs to write the content here</p>
+                                <p>Affirmation doesn’t extraordinarilly follow any monkey — but the karma is what dies.
+                                    An imminent form of man is the faith.</p>
                                 <ul className="social-list">
                                     <li>
                                         <Link href="#">
