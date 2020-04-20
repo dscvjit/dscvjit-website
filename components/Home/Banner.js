@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import ModalVideo from 'react-modal-video';
-import '../../node_modules/react-modal-video/scss/modal-video.scss';
+
+import homeImage from '../../images/home.png'
 
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
@@ -73,13 +74,13 @@ class Banner extends React.Component {
                                     <div className="col-lg-6 col-md-12">
                                         <div className="marketing-image">
                                             <img
-                                                src={'../../images/home.png'}
+                                                src={homeImage}
                                                 className="wow fadeInDown"
                                                 data-wow-delay="0.4s"
                                                 alt="img"
                                             />
                                             <img
-                                                src={'../../images/home.png'}
+                                                src={homeImage}
                                                 className="wow fadeInLeft"
                                                 data-wow-delay="0.4s"
                                                 alt="img"
