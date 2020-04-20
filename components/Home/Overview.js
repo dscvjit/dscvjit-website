@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Link from 'next/link';
 import homeWhatImage from '../../images/home-what.png'
 import homeWhyImage from '../../images/home-why.png'
@@ -35,9 +35,12 @@ class Overview extends Component {
                             <div className="col-lg-6 col-md-6 overview-content">
                                 <div className="features-holder-content">
                                     <div className="section-title">
-                                        <h2>Why Join Developer Student Clubs VJIT</h2>
+                                        <h2>Why Join DSC VJIT</h2>
                                         <div className="bar"></div>
-                                        <p>Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome. By joining a DSC, students grow their knowledge in a peer-to-peer learning environment and build solutions for local businesses and their community.</p>
+                                        <p>The sailor marks with courage, love the brig until it sings.
+                                            Salty, fine mates impatiently endure a golden, coal-black ship.
+                                            The bucaneer hoists with endurance, command the bikini atoll before it falls.
+                                            Girls grow with faith.</p>
                                     </div>
                                     <Link href="#">
                                         <a className="btn btn-primary">Join DSC VJIT</a>
@@ -62,7 +65,10 @@ class Overview extends Component {
                                     <div className="section-title">
                                         <h2>Some Another Catchy Title ? </h2>
                                         <div className="bar"></div>
-                                        <p>Catchy Content</p>
+                                        <p>The kraken ransacks with love, command the quarter-deck before it dies.
+                                            The cloud crushes with fortune, vandalize the fortress.
+                                            The grog hails with strength, view the bikini atoll until it whines.
+                                            Yardarms laugh with strength.</p>
                                     </div>
                                     <Link href="#">
                                         <a className="btn btn-primary">Catchy Button  :)</a>

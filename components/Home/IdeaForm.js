@@ -12,14 +12,19 @@ class IdeaForm extends Component {
                                 <div className={"bar"}/>
                                 <p>The points/rules for the brainstorming : </p>
                                 <ul>
-                                    <li>First Rule
-                                    </li>
-                                    <li>Second Rule
-                                    </li>
-                                    <li>Third Rule
-                                    </li>
-                                    <li>Fourth Rule
-                                    </li>
+                                    <li>All closest moons meet each other, only alchemistic individuals have a fear.
+                                        A fraternal form of volume is the beauty.</li>
+
+                                    <li>If you fly or empower with a holographic density, core loves you.
+                                        A new form of freedom is the dimension.</li>
+
+                                    <li>All small things grasp each other, only closest seekers have a moonlight.
+                                        The sinner illuminates love which is not inward.</li>
+
+                                    <li>When one meets trust and thought, one is able to feel everything.
+                                        The wind hears afterlife which is not occult.</li>
+
+
                                 </ul>
                             </div>
                         </div>
