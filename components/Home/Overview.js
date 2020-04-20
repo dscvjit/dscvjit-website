@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import homeWhatImage from '../../images/home-what.png'
+import homeWhyImage from '../../images/home-why.png'
+import homeLastImage from '../../images/home-last.png'
 
 class Overview extends Component {
     render() {
@@ -9,7 +12,7 @@ class Overview extends Component {
                     <div className="overview-box">
                         <div className="row h-100 justify-content-center align-items-center">
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src='../../images/home-what.png' alt="image" />
+                                <img src={homeWhatImage} alt="image" />
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-content">
@@ -43,7 +46,7 @@ class Overview extends Component {
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src={'../../images/home-why.png'} alt="image" />
+                                <img src={homeWhyImage} alt="image" />
                             </div>
                         </div>
                     </div>
@@ -51,7 +54,7 @@ class Overview extends Component {
                     <div className="overview-box">
                         <div className="row h-100 justify-content-center align-items-center">
                             <div className="col-lg-6 col-md-6 overview-img">
-                                <img src={'../../images/home-last.png'} alt="image" />
+                                <img src={homeLastImage} alt="image" />
                             </div>
 
                             <div className="col-lg-6 col-md-6 overview-content">

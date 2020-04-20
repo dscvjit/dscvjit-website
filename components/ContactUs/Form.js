@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import contactImage from '../../images/contact.png'
 
 class Form extends Component {
     render() {
@@ -7,13 +8,13 @@ class Form extends Component {
                 <div className="container">
                     <div className="section-title">
                         <h2>Get In Touch With Us</h2>
-                        <div className="bar"></div>
+                        <div className="bar"/>
                         <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
                     </div>
 
                     <div className="row h-100 justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-12">
-                            <img src={require('../../images/contact.png')} alt="image" />
+                            <img src={contactImage} alt="image" />
                         </div>
 
                         <div className="col-lg-6 col-md-12">
