@@ -11,3 +11,5 @@ dsc_logo.psd
 package-lock.json
 
 out/
+
+config/firebase.js

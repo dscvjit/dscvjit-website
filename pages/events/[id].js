@@ -1,25 +1,25 @@
 import React from 'react';
 import Navbar from '../../components/Layouts/Navbar';
 import Footer from '../../components/Layouts/Footer';
-import Banner from '../../components/EventDetails/Banner';
 import DetailsContent from '../../components/EventDetails/DetailsContent';
-import {useRouter} from 'next/router'
+import {getSpecificEvent} from "../../service/service";
+import {useRouter, withRouter} from "next/router";
 
-const EventDetails = () => {
-
-    const router = useRouter();
-    const {id} = router.query
+const EventDetails = ({event}) => {
     return (
         <>
             <Navbar/>
-            <Banner id={id}/>
-            <DetailsContent/>
 
+            <DetailsContent event={event}/>
             <Footer/>
         </>
-    );
-
-
+    )
 }
 
-export default EventDetails;
+EventDetails.getInitialProps = async ctx => {
+    const {id} = ctx.query
+    const res = await getSpecificEvent(id);
+    return {event: res.data}
+}
+
+export default withRouter(EventDetails);
