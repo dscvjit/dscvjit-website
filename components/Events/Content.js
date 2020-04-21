@@ -12,11 +12,11 @@ const Content = ({events}) => {
                                 console.log(`Clicked on ${event.id}`)
                             }}>
                                 <div className="project-image">
-                                    <img src={event.defaultImage} alt="work"/>
+                                    <img src={event.image} alt="work"/>
                                 </div>
 
                                 <div className="project-content">
-                                    <span>Conducted At {event.createdAt}</span>
+                                    <span>Conducted At {event.date}</span>
                                     <h3><Link href={`/events/${event.id}`}><a>{event.name}</a></Link></h3>
                                 </div>
                             </div>
