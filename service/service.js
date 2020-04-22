@@ -58,7 +58,7 @@ export const getSpecificEvent = (id) => {
     })
 }
 export const getAllProjects = () => {
-    let events = []
+    let projects = []
     return new Promise((resolve, reject) => {
         db.collection("projects")
             .get()
@@ -71,11 +71,11 @@ export const getAllProjects = () => {
                 }
                 if (Object.keys(doc).length > 0) {
                     doc.forEach(res => {
-                        events.push(res.data())
+                        projects.push(res.data())
                     })
                     resolve({
                         success: true,
-                        data: events
+                        data: projects
                     })
                 }
             })
@@ -106,6 +106,34 @@ export const getSpecificProject = (id) => {
                     resolve({
                         success: true,
                         data: doc.data()
+                    })
+                }
+            })
+            .catch(e => {
+                reject(e)
+            });
+    })
+}
+
+export const getAllTeam = () => {
+    let team = []
+    return new Promise((resolve, reject) => {
+        db.collection("team")
+            .get()
+            .then(doc => {
+                if (doc.empty) {
+                    resolve({
+                        success: false,
+                        data: {}
+                    })
+                }
+                if (Object.keys(doc).length > 0) {
+                    doc.forEach(res => {
+                        team.push(res.data())
+                    })
+                    resolve({
+                        success: true,
+                        data: team
                     })
                 }
             })
