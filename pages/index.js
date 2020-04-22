@@ -7,14 +7,9 @@ import Overview from '../components/Home/Overview';
 import IdeaForm from '../components/Home/IdeaForm';
 import RecentProjects from '../components/Home/RecentProjects';
 import FAQ from '../components/Home/FAQ';
-import {getAllProjects} from "../service/service";
 
 
 class Index extends React.Component {
-    static async getInitialProps(ctx) {
-        const res = await getAllProjects();
-        return {projects: res.data}
-    }
     render() {
         return (
             <>
@@ -22,7 +17,7 @@ class Index extends React.Component {
                 <Banner/>
                 <Overview/>
                 <Technologies/>
-                <RecentProjects projects={this.props.projects}/>
+                <RecentProjects />
                 <IdeaForm/>
                 <FAQ/>
                 <Footer/>
