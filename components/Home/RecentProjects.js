@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import dscLogoProjectImage from "../../images/dsc-logo-project.png"
-
+import Router from 'next/router'
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
@@ -61,151 +60,24 @@ class RecentProjects extends Component {
                             className="project-slides owl-carousel owl-theme"
                             {...options}
                         >
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-                                    <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-                                    </div>
+                            {this.props.projects.map(project =>(
+                                <div className="col-lg-12" key={project.id}>
+                                    <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{Router.push(`/projects/${project.id}`)}}>
+                                        <div className="project-image">
+                                            <img src={project.image} alt="work"/>
+                                        </div>
 
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 1</a>
-                                            </Link>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-                                    <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-                                    </div>
-
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 2</a>
-                                            </Link>
-                                        </h3>
+                                        <div className="project-content">
+                                            <span>{project.category}</span>
+                                            <h3>
+                                                <Link href={`/projects/${project.id}`}>
+                                                    <a>{project.name}</a>
+                                                </Link>
+                                            </h3>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-
-                                <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-                                    </div>
-
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 3</a>
-                                            </Link>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/*{isOpenImage && (*/}
-                            {/*    <Lightbox*/}
-                            {/*        mainSrc={images[photoIndex]}*/}
-                            {/*        nextSrc={images[(photoIndex + 1) % images.length]}*/}
-                            {/*        prevSrc={images[(photoIndex + images.length - 1) % images.length]}*/}
-                            {/*        onCloseRequest={() => this.setState({ isOpenImage: false })}*/}
-                            {/*        onMovePrevRequest={() =>*/}
-                            {/*        this.setState({*/}
-                            {/*            photoIndex: (photoIndex + images.length - 1) % images.length,*/}
-                            {/*        })*/}
-                            {/*        }*/}
-                            {/*        onMoveNextRequest={() =>*/}
-                            {/*            this.setState({*/}
-                            {/*                photoIndex: (photoIndex + 1) % images.length,*/}
-                            {/*            })*/}
-                            {/*        }*/}
-                            {/*    />*/}
-                            {/*)}*/}
-
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-                                    <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-                                    </div>
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 4</a>
-                                            </Link>
-                                        </h3>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-                                    <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-
-                                        <Link href="#">
-                                            <a
-                                                className="popup-btn"
-                                                onClick={e => {
-                                                    e.preventDefault();
-                                                    this.setState({isOpenImage: true})
-                                                }}
-                                            >
-                                                <i className="icofont-plus"></i>
-                                            </a>
-                                        </Link>
-                                    </div>
-
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 5</a>
-                                            </Link>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-12">
-                                <div className="single-project" style={{cursor: "pointer"}} onClick={()=>{console.log("opened the project1")}}>
-                                    <div className="project-image">
-                                        <img src={dscLogoProjectImage} alt="work"/>
-
-                                        <Link href="#">
-                                            <a
-                                                className="popup-btn"
-                                                onClick={e => {
-                                                    e.preventDefault();
-                                                    this.setState({isOpenImage: true})
-                                                }}
-                                            >
-                                                <i className="icofont-plus"></i>
-                                            </a>
-                                        </Link>
-                                    </div>
-
-                                    <div className="project-content">
-                                        <span>Category</span>
-                                        <h3>
-                                            <Link href="#">
-                                                <a>Project 6</a>
-                                            </Link>
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </OwlCarousel> : ''}
                     </div>
                     <canvas id="canvas"></canvas>
