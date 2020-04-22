@@ -5,9 +5,9 @@ import Router from 'next/router'
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
-    autoplay: false,
+    autoplay: true,
     nav: true,
-    loop: true,
+    loop: false,
     mouseDrag: true,
     autoplayHoverPause: true,
     responsiveClass: true,
