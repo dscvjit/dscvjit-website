@@ -7,7 +7,7 @@ class Banner extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h2>{this.props.id}</h2>
+                            <h2>Project Details</h2>
                         </div>
                     </div>
                 </div>

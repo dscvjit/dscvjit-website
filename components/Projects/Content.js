@@ -13,7 +13,7 @@ const Content = ({projects}) => {
                                 console.log(`Clicked on ${project.id}`)
                             }}>
                                 <div className="project-image">
-                                    <img src={project.defaultImage} alt="work"/>
+                                    <img src={project.image} alt="work"/>
                                 </div>
 
                                 <div className="project-content">
