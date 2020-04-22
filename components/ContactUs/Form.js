@@ -7,9 +7,9 @@ class Form extends Component {
             <section className="contact-area ptb-100">
                 <div className="container">
                     <div className="section-title">
-                        <h2>Get In Touch With Us</h2>
+                        <h2>Lets Talk !</h2>
                         <div className="bar"/>
-                        <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
+                        <p>Would like to sponsor an event. Get in touch with us!</p>
                     </div>
 
                     <div className="row h-100 justify-content-center align-items-center">

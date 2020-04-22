@@ -4401,8 +4401,12 @@ Subscribe CSS
     opacity: .67;
 }
 
-.subscribe-area .section-title h2, .subscribe-area .section-title p {
+.subscribe-area .section-title h3, .subscribe-area .section-title p {
     color: #000000;
+}
+
+.subscribe-area h3{
+    font-weight: 600;
 }
 
 
