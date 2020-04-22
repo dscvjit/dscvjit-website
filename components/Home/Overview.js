@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import homeWhatImage from '../../images/home-what.png';
-import homeWhyImage from '../../images/home-why.png';
+import homeWhatImage from '../../images/home-what.webp';
+import homeWhyImage from '../../images/home-why.webp';
 import homeLastImage from '../../images/home-last.png';
 
 class Overview extends Component {
