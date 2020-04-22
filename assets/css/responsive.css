@@ -3,8 +3,8 @@
     .btn {
         font-size: 14px;
         padding: 14px 27px;
-        -webkit-box-shadow: 0 5px 27px 0 rgba(163, 48, 53, 0.25);
-        box-shadow: 0 5px 27px 0 rgba(163, 48, 53, 0.25);
+        -webkit-box-shadow: 0 5px 27px 0 rgba(59, 99, 245, 0.25);
+        box-shadow: 0 5px 27px 0 rgba(59, 99, 245, 0.25);
     }
 
     .ptb-100 {
