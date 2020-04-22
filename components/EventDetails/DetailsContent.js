@@ -1,10 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import dscLogoProjectImage from "../../images/dsc-logo-project.png"
-
-// const images = [
-//     dscLogoProjectImage, dscLogoProjectImage, dscLogoProjectImage, dscLogoProjectImage
-// ]
 
 const DetailsContent = ({event}) => {
     return (
@@ -18,10 +12,9 @@ const DetailsContent = ({event}) => {
                     </div>
 
 
-
                     <div className="col-lg-12 col-md-12">
                         <div className="project-details-desc">
-                            <h3>{event.name}</h3>
+                            <h2>{event.name}</h2>
                             <p>{event.des}</p>
 
                             <div className="project-details-information">
@@ -45,12 +38,13 @@ const DetailsContent = ({event}) => {
                                     <p>70</p>
                                 </div>
 
+                                {event.links.registration !== "" ?
+                                    <div className="single-info-box">
+                                        <a href={event.links.registration} target={"_blank"}
+                                           className="btn btn-primary">Register Now</a>
+                                    </div>
+                                    : <></>}
 
-                                <div className="single-info-box">
-                                    <Link href="#">
-                                        <a className="btn btn-primary">Get Images</a>
-                                    </Link>
-                                </div>
                             </div>
                         </div>
                     </div>
