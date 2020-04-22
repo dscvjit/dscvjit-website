@@ -3026,7 +3026,6 @@ Project Details CSS
     top: 0;
     width: 100%;
     height: 100%;
-    background: #4284f7;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: .4s;
@@ -4383,7 +4382,7 @@ Subscribe CSS
     position: relative;
     z-index: 1;
     /*background-image: url(../../images/map.png);*/
-    background-position: left left;
+    background-position: left;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
