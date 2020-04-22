@@ -7,6 +7,7 @@ import Overview from '../components/Home/Overview';
 import IdeaForm from '../components/Home/IdeaForm';
 import RecentProjects from '../components/Home/RecentProjects';
 import FAQ from '../components/Home/FAQ';
+import NoSSR from 'react-no-ssr';
 
 class Index extends React.Component {
   render() {
@@ -16,7 +17,9 @@ class Index extends React.Component {
         <Banner />
         <Overview />
         <Technologies />
-        <RecentProjects />
+        <NoSSR>
+          <RecentProjects />
+        </NoSSR>
         <IdeaForm />
         <FAQ />
         <Footer />
