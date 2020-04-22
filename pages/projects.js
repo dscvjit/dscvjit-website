@@ -4,18 +4,12 @@ import Footer from '../components/Layouts/Footer'
 import Banner from "../components/Projects/Banner";
 import Content from "../components/Projects/Content";
 
-import axios from '../config/axios'
+import {getAllProjects} from '../service/service'
 
 class Projects extends React.Component {
     static async getInitialProps(ctx) {
-        const res = await axios(
-            {
-                url: '/projects',
-                method: 'GET'
-            }
-        )
-        const projectsArray = await res.data
-        return {projects: projectsArray}
+        const res = await getAllProjects()
+        return {projects: res.data}
     }
 
     render() {
