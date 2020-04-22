@@ -1,6 +1,5 @@
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/icofont.min.css';
-import '../node_modules/react-modal-video/scss/modal-video.scss';
 import 'react-image-lightbox/style.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import '../assets/css/style.css';
@@ -15,7 +14,7 @@ import { initStore } from '../store/store';
 import { DefaultSeo } from 'next-seo';
 import GoTop from '../components/Shared/GoTop';
 import Loader from '../components/Shared/Loader';
-import React from "react";
+import React from 'react';
 
 export default withRedux(initStore)(
   class MyApp extends App {
