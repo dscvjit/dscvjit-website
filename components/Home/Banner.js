@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ModalVideo from 'react-modal-video';
 
-import homeImage from '../../images/home.png';
+import homeImage from '../../images/home.webp';
 
 const isServer = typeof window === 'undefined';
 const WOW = !isServer ? require('wowjs') : null;

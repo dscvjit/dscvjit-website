@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import contactImage from '../../images/contact.png';
+import contactImage from '../../images/contact.webp';
 
 class Form extends Component {
   render() {
