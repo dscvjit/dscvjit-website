@@ -37,8 +37,6 @@
     "react-accessible-accordion": "^3.0.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
-    "react-image-lightbox": "^5.1.0",
-    "react-modal-video": "^1.2.2",
     "react-no-ssr": "^1.1.0",
     "react-owl-carousel3": "^2.2.5",
     "react-preloading-screen": "^1.0.2",
