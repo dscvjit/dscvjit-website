@@ -3015,7 +3015,7 @@ Project Details CSS
 .project-details-image {
     position: relative;
     z-index: 1;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -3057,8 +3057,8 @@ Project Details CSS
     margin-top: -20px;
 }
 
-.project-details-desc h3 {
-    font-size: 23px;
+.project-details-desc h2 {
+    font-size: 35px;
     font-weight: 700;
     margin-bottom: 15px;
     margin-top: 25px;
