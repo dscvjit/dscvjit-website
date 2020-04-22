@@ -1,25 +1,25 @@
 import React from 'react';
 import Navbar from '../../components/Layouts/Navbar';
 import Footer from '../../components/Layouts/Footer';
-import Banner from '../../components/ProjectDetails/Banner';
 import DetailsContent from '../../components/ProjectDetails/DetailsContent';
-import {useRouter} from 'next/router'
+import {withRouter} from "next/router";
+import {getSpecificProject} from "../../service/service";
+import Banner from "../../components/ProjectDetails/Banner";
 
-const ProjectDetails = () => {
-
-    const router = useRouter();
-    const {id} = router.query
-
+const ProjectDetails = ({project}) => {
     return (
         <>
             <Navbar/>
-            <Banner id={id}/>
-            <DetailsContent/>
-
+            <Banner/>
+            <DetailsContent  project={project}/>
             <Footer/>
         </>
     );
-
 }
 
-export default ProjectDetails;
+ProjectDetails.getInitialProps = async ctx => {
+    const {id} = ctx.query
+    const res = await getSpecificProject(id);
+    return {project: res.data}
+}
+export default withRouter(ProjectDetails);

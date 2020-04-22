@@ -57,3 +57,60 @@ export const getSpecificEvent = (id) => {
             });
     })
 }
+export const getAllProjects = () => {
+    let events = []
+    return new Promise((resolve, reject) => {
+        db.collection("projects")
+            .get()
+            .then(doc => {
+                if (doc.empty) {
+                    resolve({
+                        success: false,
+                        data: {}
+                    })
+                }
+                if (Object.keys(doc).length > 0) {
+                    doc.forEach(res => {
+                        events.push(res.data())
+                    })
+                    resolve({
+                        success: true,
+                        data: events
+                    })
+                }
+            })
+            .catch(e => {
+                reject(e)
+            });
+    })
+}
+
+export const getSpecificProject = (id) => {
+    return new Promise((resolve, reject) => {
+        db.collection("projects").doc(id)
+            .get()
+            .then(doc => {
+                if (doc.empty) {
+                    resolve({
+                        success: false,
+                        data: {}
+                    })
+                }
+                if (!doc.exists) {
+                    resolve({
+                        success: false,
+                        data: {}
+                    })
+                }
+                if (Object.keys(doc).length > 0) {
+                    resolve({
+                        success: true,
+                        data: doc.data()
+                    })
+                }
+            })
+            .catch(e => {
+                reject(e)
+            });
+    })
+}
