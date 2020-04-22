@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 
 const Content = ({events}) => {
     return (
@@ -9,7 +10,7 @@ const Content = ({events}) => {
                     {events.map(event =>(
                         <div className="col-lg-6 col-md-6" key={event.id}>
                             <div className="single-project" style={{cursor: "pointer"}} onClick={() => {
-                                console.log(`Clicked on ${event.id}`)
+                                Router.push(`/events/${event.id}`)
                             }}>
                                 <div className="project-image">
                                     <img src={event.image} alt="work"/>

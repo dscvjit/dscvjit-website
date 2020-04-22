@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import Router from "next/router"
 
 const Content = ({projects}) => {
     return (
@@ -10,7 +10,7 @@ const Content = ({projects}) => {
                     {projects.map(project => (
                         <div className="col-lg-4 col-md-6" key={project.id}>
                             <div className="single-project" style={{cursor: "pointer"}} onClick={() => {
-                                console.log(`Clicked on ${project.id}`)
+                                Router.push(`/projects/${project.id}`)
                             }}>
                                 <div className="project-image">
                                     <img src={project.image} alt="work"/>
