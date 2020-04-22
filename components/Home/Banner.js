@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import ModalVideo from 'react-modal-video';
 
 import homeImage from '../../images/home.webp';
 
