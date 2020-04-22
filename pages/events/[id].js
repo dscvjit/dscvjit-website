@@ -3,13 +3,12 @@ import Navbar from '../../components/Layouts/Navbar';
 import Footer from '../../components/Layouts/Footer';
 import DetailsContent from '../../components/EventDetails/DetailsContent';
 import {getSpecificEvent} from "../../service/service";
-import {useRouter, withRouter} from "next/router";
+import {withRouter} from "next/router";
 
 const EventDetails = ({event}) => {
     return (
         <>
             <Navbar/>
-
             <DetailsContent event={event}/>
             <Footer/>
         </>
