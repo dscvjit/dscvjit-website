@@ -38,7 +38,7 @@ export default withRedux(initStore)(
                         <Provider store={store}>
                             <Component {...pageProps} />
                         </Provider>
-                        <GoTop scrollStepInPx="50" delayInMs="16.66" />
+                        <GoTop scrollStepInPx="50" delayInMs="20" />
                         <Placeholder>
                             <Loader />
                         </Placeholder>
