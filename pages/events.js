@@ -5,8 +5,6 @@ import Banner from '../components/Events/Banner';
 import Content from '../components/Events/Content';
 import {getAllEvents} from "../service/service"
 
-
-
 class Events extends Component {
     static async getInitialProps(ctx) {
         const res = await getAllEvents();
