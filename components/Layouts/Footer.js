@@ -44,7 +44,7 @@ class Footer extends Component {
 
                         <div className="col-lg-6 col-md-6">
                             <section className="subscribe-area">
-                                <div className="container">
+                                <div className="container" style={{paddingLeft:'0px',paddingRight:'0px' }}>
                                     <h3>Subscribe to newsletter</h3>
                                     <div className="bar" style={{marginTop: '10px', marginBottom: '10px'}}/>
                                     <p>Provide the newsletter content here</p>

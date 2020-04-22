@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-    gridContainer: {
+    gridBox: {
         paddingTop: "10px",
         paddingBottom: "10px",
         paddingLeft: "15px",
@@ -56,7 +56,7 @@ const DetailsContent = ({project}) => {
                             </div>
                         </div>
                     </div>
-                    <Grid className={classes.gridContainer}
+                    <Grid className={classes.gridBox}
                           container justify={"flex-start"}
                           alignItems="center">
                         <Grid item lg={2} md={3} sm={3} xs={6}>

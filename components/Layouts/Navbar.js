@@ -54,8 +54,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        let { pathname } = this.props.router;
-        let { products } = this.props;
+        
 
         let layOutCls = 'marketing-navbar';
 
