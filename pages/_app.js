@@ -1,6 +1,5 @@
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/icofont.min.css';
-import 'react-image-lightbox/style.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import '../assets/css/style.css';
 import '../assets/css/responsive.css';
