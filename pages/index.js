@@ -8,22 +8,21 @@ import IdeaForm from '../components/Home/IdeaForm';
 import RecentProjects from '../components/Home/RecentProjects';
 import FAQ from '../components/Home/FAQ';
 
-
 class Index extends React.Component {
-    render() {
-        return (
-            <>
-                <Navbar/>
-                <Banner/>
-                <Overview/>
-                <Technologies/>
-                <RecentProjects />
-                <IdeaForm/>
-                <FAQ/>
-                <Footer/>
-            </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <Navbar />
+        <Banner />
+        <Overview />
+        <Technologies />
+        <RecentProjects />
+        <IdeaForm />
+        <FAQ />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default Index;
