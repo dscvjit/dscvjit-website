@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
+import { Grid, Chip } from '@material-ui/core';
 
 const Content = ({ events }) => {
   return (
@@ -21,12 +22,33 @@ const Content = ({ events }) => {
                 </div>
 
                 <div className="project-content">
-                  <span>Conducted At {event.date}</span>
-                  <h3>
-                    <Link href={`/events/${event.id}`}>
-                      <a>{event.name}</a>
-                    </Link>
-                  </h3>
+                  <span className="category">Conducted At {event.date}</span>
+                  <Grid
+                    container
+                    alignItems={'center'}
+                    justify={'space-between'}
+                  >
+                    <Grid item>
+                      <h3>
+                        <Link href={`/events/${event.id}`}>
+                          <a>{event.name}</a>
+                        </Link>
+                      </h3>
+                    </Grid>
+                    <Grid item>
+                      {event.active ? (
+                        <Chip
+                          className={'status-chip active'}
+                          label={'Active'}
+                        />
+                      ) : (
+                        <Chip
+                          className={'status-chip completed'}
+                          label={'Completed'}
+                        />
+                      )}
+                    </Grid>
+                  </Grid>
                 </div>
               </div>
             </div>

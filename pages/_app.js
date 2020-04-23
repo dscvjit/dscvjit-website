@@ -3,8 +3,8 @@ import '../assets/css/icofont.min.css';
 import '../node_modules/react-modal-video/scss/modal-video.scss';
 import 'react-image-lightbox/style.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
-import '../assets/css/style.css';
-import '../assets/css/responsive.css';
+import '../assets/css/style.scss';
+import '../assets/css/responsive.scss';
 import '../assets/css/animate.css';
 
 import { Provider } from 'react-redux';
@@ -15,7 +15,7 @@ import { initStore } from '../store/store';
 import { DefaultSeo } from 'next-seo';
 import GoTop from '../components/Shared/GoTop';
 import Loader from '../components/Shared/Loader';
-import React from "react";
+import React from 'react';
 
 export default withRedux(initStore)(
   class MyApp extends App {
