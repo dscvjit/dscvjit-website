@@ -16,6 +16,7 @@ import { DefaultSeo } from 'next-seo';
 import GoTop from '../components/Shared/GoTop';
 import Loader from '../components/Shared/Loader';
 import React from 'react';
+import '../fontAwesome';
 
 export default withRedux(initStore)(
   class MyApp extends App {
