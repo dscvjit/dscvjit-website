@@ -2939,11 +2939,16 @@ Project CSS
     margin: 0;
 }
 
-.single-project .project-content span {
+.single-project .project-content .category {
     display: block;
     margin-bottom: 10px;
     color: #ea4335;
     font-size: 15px;
+}
+
+.single-project .project-content .status-chip{
+    color:#ffffff;
+    font-family:"inherit"
 }
 
 .single-project .project-image {
