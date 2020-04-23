@@ -3,21 +3,19 @@ import Navbar from '../components/Layouts/Navbar';
 import Footer from '../components/Layouts/Footer';
 import Banner from '../components/Team/Banner';
 import Members from '../components/Team/Members';
-import { getAllTeam } from '../service/service';
+import NoSSR from 'react-no-ssr';
 
-const Team = ({ members }) => {
+const Team = () => {
   return (
     <>
       <Navbar />
       <Banner />
-      <Members members={members} />
+      <NoSSR>
+        <Members />
+      </NoSSR>
       <Footer />
     </>
   );
-};
-Team.getInitialProps = async (ctx) => {
-  const res = await getAllTeam();
-  return { members: res.data };
 };
 
 export default Team;
