@@ -2849,9 +2849,11 @@ Project CSS
 
     .status-chip {
       color: $white_color;
+
       &.active {
         background: $success;
       }
+
       &.completed {
         background: $error;
       }
