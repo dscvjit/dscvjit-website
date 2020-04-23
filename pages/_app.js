@@ -1,5 +1,4 @@
 import '../assets/css/bootstrap.min.css';
-import '../assets/css/icofont.min.css';
 import '../node_modules/react-modal-video/scss/modal-video.scss';
 import 'react-image-lightbox/style.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
