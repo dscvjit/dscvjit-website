@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const useStyles = makeStyles({
   socialTeamsIconsList: {
@@ -82,7 +83,17 @@ const Members = () => {
                               href={member.socialLinks[website]}
                               target={'_blank'}
                             >
-                              <i className={`icofont-${website}`} />
+                              {website === 'facebook' ? (
+                                <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                              ) : website === 'medium' ? (
+                                <FontAwesomeIcon icon={['fab', 'medium-m']} />
+                              ) : website === 'web' ? (
+                                <FontAwesomeIcon
+                                  icon={['fas', 'window-maximize']}
+                                />
+                              ) : (
+                                <FontAwesomeIcon icon={['fab', website]} />
+                              )}
                             </a>
                           </li>
                         ) : (

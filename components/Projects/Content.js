@@ -21,7 +21,7 @@ const Content = ({ projects }) => {
                 </div>
 
                 <div className="project-content">
-                  <span>{project.category}</span>
+                  <span className="category">{project.category}</span>
                   <h3>
                     <Link href={`/projects/${project.id}`}>
                       <a>{project.name}</a>

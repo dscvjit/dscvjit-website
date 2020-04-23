@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import dscLogo from '../../images/dsclogo.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Footer extends Component {
   render() {
@@ -21,32 +22,24 @@ class Footer extends Component {
                 </p>
                 <ul className="social-list">
                   <li>
-                    <Link href="#">
-                      <a>
-                        <i className="icofont-facebook"></i>
-                      </a>
-                    </Link>
+                    <a href="https://facebook.com">
+                      <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                    </a>
                   </li>
                   <li>
-                    <Link href="#">
-                      <a>
-                        <i className="icofont-twitter"></i>
-                      </a>
-                    </Link>
+                    <a href="https://twitter.com">
+                      <FontAwesomeIcon icon={['fab', 'twitter']} />
+                    </a>
                   </li>
                   <li>
-                    <Link href="#">
-                      <a>
-                        <i className="icofont-instagram"></i>
-                      </a>
-                    </Link>
+                    <a href="https://twitter.com">
+                      <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    </a>
                   </li>
                   <li>
-                    <Link href="#">
-                      <a>
-                        <i className="icofont-linkedin"></i>
-                      </a>
-                    </Link>
+                    <a href="https://github.com">
+                      <FontAwesomeIcon icon={['fab', 'github']} />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -77,10 +70,7 @@ class Footer extends Component {
                     <button className="btn btn-primary" type="submit">
                       Subscribe
                     </button>
-                    <div
-                      id="validator-newsletter"
-                      className="form-result"
-                    ></div>
+                    <div id="validator-newsletter" className="form-result" />
                   </form>
                 </div>
               </section>
