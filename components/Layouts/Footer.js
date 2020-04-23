@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Component } from 'react';
-import dscLogo from '../../images/dsclogo.png';
+import dscLogo from '../../images/dsclogo.webp';
 
 class Footer extends Component {
   render() {
