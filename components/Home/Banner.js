@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ModalVideo from 'react-modal-video';
 
 import homeImage from '../../images/home.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const isServer = typeof window === 'undefined';
 const WOW = !isServer ? require('wowjs') : null;
@@ -62,22 +63,22 @@ class Banner extends React.Component {
                         >
                           <li>
                             <a href="https://facebook.com">
-                              <i className="icofont-facebook" />
+                              <FontAwesomeIcon icon={['fab', 'facebook-f']} />
                             </a>
                           </li>
                           <li>
                             <a href="https://twitter.com">
-                              <i className="icofont-twitter" />
+                              <FontAwesomeIcon icon={['fab', 'twitter']} />
                             </a>
                           </li>
                           <li>
                             <a href="https://twitter.com">
-                              <i className="icofont-instagram" />
+                              <FontAwesomeIcon icon={['fab', 'instagram']} />
                             </a>
                           </li>
                           <li>
                             <a href="https://github.com">
-                              <i className="icofont-github" />
+                              <FontAwesomeIcon icon={['fab', 'github']} />
                             </a>
                           </li>
                         </ul>
