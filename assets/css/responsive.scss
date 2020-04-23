@@ -9,8 +9,8 @@ $value_five: 1199px;
 $value_six: 1200px;
 $value_seven: 1350px;
 $value_eight: 1910px;
-$template_color: #ffffff;
-$template_color2: #4186f7;
+$primary: #4284f7;
+$primary-dark: #1F45FC;
 $white_color: #ffffff;
 $black_color: #000000;
 $paragraph_color: #818992;
@@ -247,7 +247,7 @@ $paragraph_color: #818992;
             img {
                 position: relative;
                 display: none;
-                
+
                 &:last-child {
                     display: block;
                 }
@@ -259,7 +259,7 @@ $paragraph_color: #818992;
             img {
                 position: relative;
                 display: none !important;
-                
+
                 &:last-child {
                     display: block !important;
                 }
@@ -638,7 +638,7 @@ $paragraph_color: #818992;
                 bottom: 0;
                 right: 0;
             }
- 
+
             li {
                 -ms-flex: 0 0 33.3333%;
                 -webkit-box-flex: 0;
@@ -709,7 +709,7 @@ $paragraph_color: #818992;
             right: 20px;
         }
         margin-bottom: 30px;
-        
+
         h3 {
             font-size: 27px;
         }
@@ -830,7 +830,7 @@ $paragraph_color: #818992;
 
     .next-generation-virtual-reality {
         padding-bottom: 20px;
-        
+
         .single-item {
             padding-left: 45px;
             margin-bottom: 30px;
@@ -990,7 +990,7 @@ $paragraph_color: #818992;
     .subscribe-area {
         .newsletter-form {
             max-width: 100%;
-            
+
             .btn {
                 position: relative;
                 display: block;
@@ -1395,7 +1395,7 @@ $paragraph_color: #818992;
                 }
                 .blockquote {
                     padding: 20px 15px;
-                    border-left: 3px solid $template_color;
+                    border-left: 3px solid $primary;
 
                     p {
                         font-size: 15px;
@@ -1522,7 +1522,7 @@ $paragraph_color: #818992;
         .single-footer-widget {
             padding: 0 !important;
             margin-bottom: 30px;
-    
+
             h3 {
                 font-size: 20px;
                 margin-bottom: 18px;
@@ -1531,11 +1531,11 @@ $paragraph_color: #818992;
         .copyright-area {
             margin-top: 20px;
             text-align: center;
-    
+
             ul {
                 text-align: center;
                 margin-top: 20px;
-    
+
                 li {
                     &:first-child {
                         padding-left: 0;
@@ -1802,7 +1802,7 @@ $paragraph_color: #818992;
         &.marketing-features {
             .features-inner-area {
                 margin-top: 55px;
-    
+
                 .features-image {
                     margin: {
                         bottom: 0;
@@ -1820,7 +1820,7 @@ $paragraph_color: #818992;
             }
             .features-inner-area {
                 margin-top: 55px;
-    
+
                 .features-image {
                     margin: {
                         bottom: 0;
@@ -1838,7 +1838,7 @@ $paragraph_color: #818992;
             }
             .features-inner-area {
                 margin-top: 55px;
-    
+
                 .features-image {
                     margin: {
                         bottom: 0;
@@ -2190,7 +2190,7 @@ $paragraph_color: #818992;
         }
         .box {
             margin-top: 30px;
-            
+
             h3 {
                 font-size: 21px;
             }
@@ -2217,7 +2217,7 @@ $paragraph_color: #818992;
             padding-right: 30px;
             padding-left: 30px;
             margin-bottom: 20px;
-   
+
             padding-bottom: 10px;
 
             li {
@@ -2421,7 +2421,7 @@ $paragraph_color: #818992;
     .crake-nav nav {
         .navbar-brand {
             img {
-                max-width: 80px !important;
+                max-width: 160px !important;
             }
         }
     }
@@ -2484,7 +2484,7 @@ $paragraph_color: #818992;
             top: 195px;
             bottom: 160px;
         }
-        
+
         .hero-content {
             &.pl-4 {
                 padding-left: 0 !important;
@@ -2546,7 +2546,7 @@ $paragraph_color: #818992;
     .app-download {
         .download-image {
             bottom: 200px;
-    
+
             img {
                 left: -10px;
                 top: 0;
@@ -2610,7 +2610,7 @@ $paragraph_color: #818992;
                 left: 75px;
                 top: 32px;
             }
-        }   
+        }
     }
     .tab {
         .tabs {
@@ -2791,7 +2791,7 @@ $paragraph_color: #818992;
                 left: 0;
                 top: -40px;
                 width: 95%;
-    
+
                 &:last-child {
                     left: 380px;
                     top: -20px;
@@ -2821,11 +2821,11 @@ $paragraph_color: #818992;
     }
     .app-download {
         .download-image {
-            img {   
+            img {
                 left: -75px;
                 top: 0;
                 width: 485px;
-    
+
                 &:last-child {
                     left: 280px;
                     top: 0;
@@ -2840,7 +2840,7 @@ $paragraph_color: #818992;
         .close {
             right: 29%;
         }
-    } 
+    }
 }
 
 // Only For Mobile Navbar
@@ -2852,7 +2852,7 @@ $paragraph_color: #818992;
         nav {
             .navbar-brand {
                 img {
-                    max-width: 90px;
+                    max-width: 155px;
                 }
             }
         }
@@ -2861,8 +2861,8 @@ $paragraph_color: #818992;
         display: none;
     }
     .navbar-collapse {
-        background-color: $template_color;
-        border: 1px solid #eeeeee;
+        background-color: $primary;
+        border: 1px solid $primary-dark;
         margin-top: 15px;
     }
     .marketing-navbar .navbar-collapse {
@@ -2872,7 +2872,7 @@ $paragraph_color: #818992;
     .crake-nav nav .navbar-nav li .dropdown_menu {
         left: 15px;
         width: 200px;
-        padding: 10px 0; 
+        padding: 10px 0;
     }
     .crake-nav nav .navbar-nav li .dropdown_menu li .dropdown_menu {
         left: 90px;
@@ -2895,7 +2895,7 @@ $paragraph_color: #818992;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
     .marketing-navbar .navbar-light .navbar-toggler {
-        border-color: $black_color;
+        border-color: $primary;
     }
     .marketing-navbar .navbar-light .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
