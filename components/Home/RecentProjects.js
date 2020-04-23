@@ -75,7 +75,7 @@ const RecentProjects = () => {
                       }}
                     >
                       <div className="project-image">
-                        <Skeleton variant="rect" width={'100%'} height={200} />
+                        <Skeleton variant="rect" width={'100%'} height={250} />
                       </div>
                       <div className="project-content">
                         <Skeleton />
