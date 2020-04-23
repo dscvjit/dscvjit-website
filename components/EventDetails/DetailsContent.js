@@ -1,5 +1,6 @@
 import React from 'react';
-import { Chip } from '@material-ui/core';
+import { Grid, Chip } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DetailsContent = ({ event }) => {
   return (
@@ -19,6 +20,28 @@ const DetailsContent = ({ event }) => {
             <div className="project-details-desc">
               <h2>{event.name}</h2>
             </div>
+
+            <Grid
+              container
+              direction="row"
+              justify="flex-start"
+              alignItems="center"
+              spacing={2}
+            >
+              <Grid container item lg={2} md={3} sm={4} xs={12} spacing={1}>
+                <Grid item>
+                  <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
+                </Grid>
+                <Grid item>{event.venue.name}</Grid>
+              </Grid>
+              <Grid container lg={2} md={3} sm={4} xs={12} item spacing={1}>
+                <Grid item>
+                  <FontAwesomeIcon icon={['fas', 'table']} />
+                </Grid>
+                <Grid item>{event.date}</Grid>
+              </Grid>
+            </Grid>
+
             <div>
               <div className="project-details-desc">
                 <p>{event.des}</p>

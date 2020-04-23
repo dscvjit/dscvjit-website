@@ -12,11 +12,9 @@ import {
   faPhoneAlt,
   faAt,
   faMapMarkerAlt,
-  faWindowRestore,
-  faWindowMaximize
+  faWindowMaximize,
+  faTable
 } from '@fortawesome/free-solid-svg-icons';
-
-// import { faWindowMaximize } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
   faFacebookF,
@@ -28,6 +26,6 @@ library.add(
   faPhoneAlt,
   faAt,
   faMapMarkerAlt,
-  faWindowMaximize,
-  faWindowRestore
+  faTable,
+  faWindowMaximize
 );
