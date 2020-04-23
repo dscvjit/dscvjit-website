@@ -1,18 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  gridBox: {
-    paddingTop: '10px',
-    paddingBottom: '10px',
-    paddingLeft: '15px',
-    paddingRight: '15px'
-  }
-});
 
 const DetailsContent = ({ project }) => {
-  const classes = useStyles();
   return (
     <section className="project-details-area ptb-50">
       <div className="container">
@@ -56,7 +45,7 @@ const DetailsContent = ({ project }) => {
             </div>
           </div>
           <Grid
-            className={classes.gridBox}
+            className={'project-details-links'}
             container
             justify={'flex-start'}
             alignItems="center"
