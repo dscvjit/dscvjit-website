@@ -3,7 +3,7 @@ import { withRouter } from 'next/router';
 import { connect } from 'react-redux';
 import Link from '../../utils/ActiveLink';
 import SearchForm from './SearchForm';
-import dsclogo from '../../images/dsclogo.png';
+import dsclogo from '../../images/dsclogo.webp';
 
 class Navbar extends React.Component {
   _isMounted = false;
