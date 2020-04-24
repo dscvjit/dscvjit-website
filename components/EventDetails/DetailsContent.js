@@ -3,11 +3,23 @@ import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
-import { getAllSpeakersFromEvent } from '../../service/service';
+import {
+  getAllSpeakersFromEvent,
+  getAllPartnersFromEvent
+} from '../../service/service';
 
 const DetailsContent = ({ event }) => {
-  const fetcher = () => getAllSpeakersFromEvent(event['speakers']);
-  const { data, error } = useSWR('/event/speakers', fetcher);
+  const fetchSpeakers = () => getAllSpeakersFromEvent(event['speakers']);
+  const fetchPartners = () => getAllPartnersFromEvent(event['partners']);
+
+  const { data: speakers, error: speakersError } = useSWR(
+    '/event/speakers',
+    fetchSpeakers
+  );
+  const { data: partners, error: partnersError } = useSWR(
+    '/events/partners',
+    fetchPartners
+  );
   const skeletonArray = Array.from(new Array(4));
 
   return (
@@ -39,7 +51,7 @@ const DetailsContent = ({ event }) => {
                   <Grid item>
                     <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
                   </Grid>
-                  <Grid item>{event.venue.name}</Grid>
+                  <Grid item>{event['venue'].name}</Grid>
                 </Grid>
                 <Grid container lg={2} md={3} sm={4} xs={12} item spacing={1}>
                   <Grid item>
@@ -86,19 +98,19 @@ const DetailsContent = ({ event }) => {
 
               <p>{event.des}</p>
 
-              {error ? (
-                <>Error {error.message}</>
+              {speakersError ? (
+                <>Error {speakersError.message}</>
               ) : (
                 <>
-                  <h3>Speakers</h3>
+                  <h3 className={'sub-heading'}>Meet the Speakers / Guests</h3>
                   <Grid
-                    className={'mb-0'}
+                    className={'my-1'}
                     container
                     alignItems="center"
                     justify={'space-evenly'}
                     spacing={2}
                   >
-                    {!data
+                    {!speakers
                       ? skeletonArray.map((item, index) => (
                           <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                             <div className="single-project">
@@ -126,7 +138,7 @@ const DetailsContent = ({ event }) => {
                             </div>
                           </Grid>
                         ))
-                      : data.data.map((speaker) => (
+                      : speakers.data.map((speaker) => (
                           <Grid
                             item
                             lg={4}
@@ -184,6 +196,66 @@ const DetailsContent = ({ event }) => {
                                 </ul>
                               </div>
                             </div>
+                          </Grid>
+                        ))}
+                  </Grid>
+                </>
+              )}
+
+              {partnersError ? (
+                <>Unable to fetch sponsors Error: {partnersError.message}</>
+              ) : (
+                <>
+                  <h3 className={'sub-heading '}>Event Partners / Sponsors</h3>
+                  <Grid
+                    className={'my-1'}
+                    container
+                    direction={'row'}
+                    alignItems={'center'}
+                    justify={'space-evenly'}
+                    spacing={2}
+                  >
+                    {!partners
+                      ? skeletonArray.map((item, index) => (
+                          <Grid item lg={3} md={4} sm={6} xs={12} key={index}>
+                            <Skeleton
+                              className={'skeleton-box'}
+                              animation={'wave'}
+                              variant={'rect'}
+                              height={'60px'}
+                            />
+                          </Grid>
+                        ))
+                      : partners.data.map((partner) => (
+                          <Grid
+                            item
+                            lg={3}
+                            md={4}
+                            sm={6}
+                            xs={12}
+                            container
+                            alignItems={'center'}
+                            justify={'center'}
+                            key={partner.id}
+                          >
+                            <a
+                              href={partner.socialLinks.web}
+                              className={'sponsor-box'}
+                            >
+                              <Grid
+                                container
+                                alignItems={'center'}
+                                justify={'space-evenly'}
+                                spacing={1}
+                              >
+                                <Grid item>
+                                  <img src={partner.image} alt={partner.name} />
+                                </Grid>
+                                <Grid item>
+                                  <h3>{partner.name}</h3>
+                                </Grid>
+                              </Grid>
+                            </a>
                           </Grid>
                         ))}
                   </Grid>

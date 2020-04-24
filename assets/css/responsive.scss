@@ -1440,6 +1440,9 @@ $paragraph_color: #818992;
 
   .project-details-desc {
     h3 {
+      &.sub-heading {
+        font-size:24px
+      }
       font-size: 20px;
       margin: {
         bottom: 15px;
