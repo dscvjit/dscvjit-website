@@ -5,8 +5,9 @@ $font_family: 'Nunito', sans-serif;
 $primary: #4284f7;
 $primary-dark: #1F45FC;
 $secondary: #ea4436;
+$secondary-dark: #FF0000;
 
-$error: #ea3526;
+$error: #e71401;
 $success: #34a852;
 $warning: #fabb07;
 
@@ -74,6 +75,11 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.center-skeleton {
+  display: table;
+  margin: 0 auto;
 }
 
 button {
@@ -3023,15 +3029,16 @@ Project Details CSS
 }
 
 .project-details-desc {
-  h2 {
+  h3 {
     font: {
-      size: 35px;
+      size: 28px;
       weight: 700;
     }
     margin: {
-      bottom: 15px;
+      bottom: 10px;
     }
   }
+
 
   p {
     margin-bottom: 15px;
@@ -3307,6 +3314,104 @@ Screenshot CSS
         visibility: visible;
         opacity: 1;
         transform: scale(1);
+      }
+    }
+  }
+}
+
+/*================================================
+Speakers Content
+=================================================*/
+
+.speakers-content {
+  padding: 20px;
+
+  h3 {
+    font: {
+      size: 23px;
+      weight: 700;
+    }
+    margin-bottom: 8px;
+  }
+
+  span {
+    display: block;
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font: {
+      size: 18px;
+      weight: 600;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 15px 0 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        border: 1px solid $text-color;
+        border-radius: 50%;
+        font-size: 14px;
+        margin: 0 2px;
+        color: $text-color;
+
+        &:hover {
+          color: $white_color;
+          background: $primary;
+          border-color: $primary;
+        }
+
+        &.facebook {
+          border-color: #5580FF;
+          color: #5580FF;
+
+          &:hover {
+            background-color: #5580FF;
+            color: $white_color;
+          }
+        }
+
+        &.instagram {
+          border-color: $black_color;
+          color: $black_color;
+
+          &:hover {
+            background-color: $black_color;
+            color: $white_color;
+          }
+        }
+
+        &.twitter {
+          border-color: #FF8A73;
+          color: #FF8A73;
+
+          &:hover {
+            background-color: #FF8A73;
+            color: $white_color;
+          }
+        }
+
+        &.linkedin {
+          border-color: #FFD474;
+          color: #FFD474;
+
+          &:hover {
+            background-color: #FFD474;
+            color: $white_color;
+          }
+        }
       }
     }
   }
@@ -5273,6 +5378,35 @@ Product Details CSS
 }
 
 /*================================================
+Event Speakers CSS
+=================================================*/
+.event-speakers {
+  position: relative;
+  background: $white_color;
+  z-index: 1;
+  padding: {
+    top: 200px;
+    bottom: 120px;
+  }
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font: {
+      size: 35px;
+      weight: 700;
+    }
+    color: $primary;
+  }
+
+  .bubble-animate {
+    .circle {
+      background: $primary;
+    }
+  }
+}
+
+/*================================================
 Page Title CSS
 =================================================*/
 .page-title-banner {
@@ -5296,7 +5430,7 @@ Page Title CSS
 
   .bubble-animate {
     .circle {
-      background: $white_color;
+      background: $primary;
     }
   }
 }

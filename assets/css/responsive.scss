@@ -889,11 +889,23 @@ $paragraph_color: #818992;
       }
     }
   }
+  .speakers-content {
+    padding:15px;
+    h3 {
+      font-size: 20px;
+    }
+  }
   .single-team-member-box {
     .team-content {
       h3 {
         font-size: 20px;
       }
+    }
+  }
+  .speakers-content{
+    padding:15px;
+    h3 {
+      font-size: 20px;
     }
   }
 
@@ -2268,11 +2280,23 @@ $paragraph_color: #818992;
       }
     }
   }
+  .speakers-content{
+    padding:15px;
+    h3 {
+      font-size: 21px;
+    }
+  }
   .single-team-member-box {
     .team-content {
       h3 {
         font-size: 21px;
       }
+    }
+  }
+  .speakers-content{
+    padding:15px;
+    h3 {
+      font-size: 21px;
     }
   }
 
@@ -2487,7 +2511,7 @@ $paragraph_color: #818992;
   .project-details-desc {
     h3 {
       font-size: 21px;
-      margin-top: 20px;
+      margin-top: 8px;
     }
 
     .project-details-information {
