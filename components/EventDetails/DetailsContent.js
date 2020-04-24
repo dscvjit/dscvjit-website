@@ -1,8 +1,15 @@
 import React from 'react';
-import { Grid, Chip } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useSWR from 'swr';
+import Skeleton from '@material-ui/lab/Skeleton';
+import { getAllSpeakersFromEvent } from '../../service/service';
 
 const DetailsContent = ({ event }) => {
+  const fetcher = () => getAllSpeakersFromEvent(event['speakers']);
+  const { data, error } = useSWR('/event/speakers', fetcher);
+  const skeletonArray = Array.from(new Array(4));
+
   return (
     <section className="project-details-area ptb-100">
       <div className="container-fluid">
@@ -18,68 +25,190 @@ const DetailsContent = ({ event }) => {
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <div className="project-details-desc">
-              <h2>{event.name}</h2>
-            </div>
+              <h1>{event.name}</h1>
 
-            <Grid
-              container
-              direction="row"
-              justify="flex-start"
-              alignItems="center"
-              spacing={2}
-            >
-              <Grid container item lg={2} md={3} sm={4} xs={12} spacing={1}>
-                <Grid item>
-                  <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
+              <Grid
+                className="mb-0"
+                container
+                direction="row"
+                justify="flex-start"
+                alignItems="center"
+                spacing={2}
+              >
+                <Grid container item lg={2} md={3} sm={4} xs={12} spacing={1}>
+                  <Grid item>
+                    <FontAwesomeIcon icon={['fas', 'map-marker-alt']} />
+                  </Grid>
+                  <Grid item>{event.venue.name}</Grid>
                 </Grid>
-                <Grid item>{event.venue.name}</Grid>
-              </Grid>
-              <Grid container lg={2} md={3} sm={4} xs={12} item spacing={1}>
-                <Grid item>
-                  <FontAwesomeIcon icon={['fas', 'table']} />
+                <Grid container lg={2} md={3} sm={4} xs={12} item spacing={1}>
+                  <Grid item>
+                    <FontAwesomeIcon icon={['fas', 'table']} />
+                  </Grid>
+                  <Grid item>{event.date}</Grid>
                 </Grid>
-                <Grid item>{event.date}</Grid>
               </Grid>
-            </Grid>
 
-            <div>
-              <div className="project-details-desc">
-                <p>{event.des}</p>
-
-                <div className="project-details-information">
-                  <div className="single-info-box">
-                    <h4>Conducted By</h4>
-                    <p>DSC Web Team</p>
-                  </div>
-
-                  <div className="single-info-box">
-                    <h4>Category</h4>
-                    <p>Workshop</p>
-                  </div>
-
-                  <div className="single-info-box">
-                    <h4>Conducted On</h4>
-                    <p>19-04-2020</p>
-                  </div>
-
-                  <div className="single-info-box">
-                    <h4>Attendees</h4>
-                    <p>70</p>
-                  </div>
-
+              <Grid
+                className={'my-0'}
+                container
+                alignItems={'center'}
+                justify={'flex-start'}
+                spacing={2}
+              >
+                <Grid item>
                   {event.links.registration !== '' ? (
-                    <div className="single-info-box">
-                      <a
-                        href={event.links.registration}
-                        target={'_blank'}
-                        className="btn btn-primary"
-                      >
-                        Register Now
-                      </a>
-                    </div>
+                    <a
+                      href={event.links.registration}
+                      target={'_blank'}
+                      className="btn btn-primary mb-2"
+                    >
+                      Register Now
+                    </a>
                   ) : (
                     <></>
                   )}
+                </Grid>
+                <Grid item>
+                  {event.links.registration !== '' ? (
+                    <a
+                      href={event.links.event}
+                      target={'_blank'}
+                      className="btn btn-secondary mb-2"
+                    >
+                      Event Link
+                    </a>
+                  ) : (
+                    <></>
+                  )}
+                </Grid>
+              </Grid>
+
+              <p>{event.des}</p>
+
+              {error ? (
+                <>Error {error.message}</>
+              ) : (
+                <>
+                  <h3>Speakers</h3>
+                  <Grid
+                    className={'mb-0'}
+                    container
+                    alignItems="center"
+                    justify={'space-evenly'}
+                    spacing={2}
+                  >
+                    {!data
+                      ? skeletonArray.map((item, index) => (
+                          <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
+                            <div className="single-project">
+                              <div className="project-image">
+                                <Skeleton
+                                  variant="rect"
+                                  animation={'wave'}
+                                  width={'100%'}
+                                  height={300}
+                                />
+                              </div>
+                              <div className="project-content">
+                                <Skeleton animation="wave" variant={'text'} />
+                                <Skeleton
+                                  className={'center-skeleton'}
+                                  animation="wave"
+                                  width="60%"
+                                />
+                                <Skeleton
+                                  className={'center-skeleton'}
+                                  animation="wave"
+                                  width="70%"
+                                />
+                              </div>
+                            </div>
+                          </Grid>
+                        ))
+                      : data.data.map((speaker) => (
+                          <Grid
+                            item
+                            lg={4}
+                            md={6}
+                            sm={6}
+                            xs={12}
+                            key={speaker.id}
+                          >
+                            <div className="single-project">
+                              <div className="project-image">
+                                <img src={speaker.image} alt={speaker.name} />
+                              </div>
+                              <div className="speakers-content">
+                                <h3>{speaker.name}</h3>
+                                <span>{speaker['designation']}</span>
+                                <h4>{speaker['company'].name}</h4>
+                                <ul className={'socialTeamsIconsList'}>
+                                  {Object.keys(speaker['socialLinks']).map(
+                                    (url) =>
+                                      speaker['socialLinks'][url] !== '' ? (
+                                        <li
+                                          className={'socialTeamIcon'}
+                                          key={url}
+                                        >
+                                          <a
+                                            href={speaker['socialLinks'][url]}
+                                            target={'_blank'}
+                                          >
+                                            {url === 'facebook' ? (
+                                              <FontAwesomeIcon
+                                                icon={['fab', 'facebook-f']}
+                                              />
+                                            ) : url === 'medium' ? (
+                                              <FontAwesomeIcon
+                                                icon={['fab', 'medium-m']}
+                                              />
+                                            ) : url === 'web' ? (
+                                              <FontAwesomeIcon
+                                                icon={[
+                                                  'fas',
+                                                  'window-maximize'
+                                                ]}
+                                              />
+                                            ) : (
+                                              <FontAwesomeIcon
+                                                icon={['fab', url]}
+                                              />
+                                            )}
+                                          </a>
+                                        </li>
+                                      ) : (
+                                        <></>
+                                      )
+                                  )}
+                                </ul>
+                              </div>
+                            </div>
+                          </Grid>
+                        ))}
+                  </Grid>
+                </>
+              )}
+
+              <div className="project-details-information">
+                <div className="single-info-box">
+                  <h4>Conducted By</h4>
+                  <p>DSC Web Team</p>
+                </div>
+
+                <div className="single-info-box">
+                  <h4>Category</h4>
+                  <p>Workshop</p>
+                </div>
+
+                <div className="single-info-box">
+                  <h4>Conducted On</h4>
+                  <p>19-04-2020</p>
+                </div>
+
+                <div className="single-info-box">
+                  <h4>Attendees</h4>
+                  <p>70</p>
                 </div>
               </div>
             </div>
