@@ -86,6 +86,37 @@ export const getAllSpeakersFromEvent = (speakersId) => {
     }
   });
 };
+
+export const getAllPartnersFromEvent = (partnersId) => {
+  let partners = [];
+  return new Promise((resolve, reject) => {
+    for (const partnerId of partnersId) {
+      db.collection('partners')
+        .doc(partnerId)
+        .get()
+        .then((doc) => {
+          if (doc.empty) {
+            resolve({
+              success: false,
+              data: {}
+            });
+          }
+          partners.push(doc.data());
+          if (partners.length === partnersId.length) {
+            console.log('partners: ', partners);
+            resolve({
+              success: true,
+              data: partners
+            });
+          }
+        })
+        .catch((e) => {
+          reject(e);
+        });
+    }
+  });
+};
+
 export const getAllProjects = () => {
   let projects = [];
   return new Promise((resolve, reject) => {
