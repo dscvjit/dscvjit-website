@@ -3029,6 +3029,10 @@ Project Details CSS
 }
 
 .project-details-desc {
+  h1 {
+    font-weight: 600;
+  }
+
   h3 {
     font: {
       size: 28px;
@@ -3957,10 +3961,58 @@ App Download CSS
 }
 
 /*================================================
+Sponsor Logo  CSS
+=================================================*/
+.skeleton-box {
+  display: block;
+  box-shadow: 0 10px 55px 5px rgba(43, 106, 249, 0.17);
+  position: relative;
+  padding: 15px 15px 15px 80px;
+  border-radius: 5px;
+  transition: .4s;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    i {
+      color: $primary-dark;
+    }
+  }
+}
+.sponsor-box {
+  display: block;
+  box-shadow: 0 10px 55px 5px rgba(43, 106, 249, 0.17);
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  transition: .4s;
+  box-sizing: border-box;
+
+  img{
+    max-height: 75px;
+  }
+  h3 {
+    font: {
+      size: 23px;
+      weight: 700;
+    }
+    margin-bottom: 0px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    i {
+      color: $primary-dark;
+    }
+  }
+}
+/*================================================
 Platform Connect CSS
 =================================================*/
 .platform-connect {
-  background: $white_color url('../../images/bg-point.png') no-repeat fixed left -600px center/ auto;
 
   h2 {
     text-align: center;
@@ -3983,7 +4035,6 @@ Platform Connect CSS
     padding: 15px 15px 15px 80px;
     border-radius: 5px;
     transition: .4s;
-    background: $white_color;
 
     img {
       position: absolute;
