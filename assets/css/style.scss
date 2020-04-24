@@ -5,8 +5,9 @@ $font_family: 'Nunito', sans-serif;
 $primary: #4284f7;
 $primary-dark: #1F45FC;
 $secondary: #ea4436;
+$secondary-dark: #FF0000;
 
-$error: #ea3526;
+$error: #e71401;
 $success: #34a852;
 $warning: #fabb07;
 
@@ -76,6 +77,11 @@ p {
   }
 }
 
+.center-skeleton {
+  display: table;
+  margin: 0 auto;
+}
+
 button {
   outline: 0 !important;
 }
@@ -115,7 +121,68 @@ button {
       background: $primary-dark;
     }
   }
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    transition: .4s;
+    background: $primary-dark;
+    z-index: -1;
+    border-radius: 5px;
+  }
 }
+
+.btn-secondary {
+  color: $white_color;
+  background-color: $secondary;
+
+  &:hover, &:focus, &:active {
+    color: $white_color;
+    background: $secondary-dark;
+    transform: translateY(-5px);
+  }
+
+  &.focus, &:focus {
+    box-shadow: unset;
+  }
+
+  &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: unset;
+  }
+
+  &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: $white_color;
+    background: $secondary-dark;
+    transform: translateY(-5px);
+  }
+
+  &.disabled, &:disabled {
+    color: $white_color;
+    background-color: $secondary;
+    border-color: $secondary;
+    opacity: 1;
+
+    &:hover, &:focus {
+      background: $error;
+    }
+  }
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    transition: .4s;
+    background: $secondary-dark;
+    z-index: -1;
+    border-radius: 5px;
+  }
+}
+
 
 .btn {
   font: {
@@ -131,17 +198,6 @@ button {
   z-index: 1;
   transition: .9s;
 
-  &::after, &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 0;
-    transition: .4s;
-    background: $primary-dark;
-    z-index: -1;
-    border-radius: 5px;
-  }
 
   &::after {
     left: 0;
@@ -2899,6 +2955,16 @@ Project CSS
     img {
       transform-style: unset !important;
       border-radius: 5px;
+
+      .event {
+        min-height: 500px;
+        max-height: 500px
+      }
+
+      .project {
+        max-height: 170px;
+        min-height: 170px;
+      }
     }
   }
 
@@ -2972,14 +3038,32 @@ Project Details CSS
   }
 }
 
+.MuiChip-root {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
 .project-details-desc {
-  h2 {
+  h1 {
+    font-weight: 700;
+  }
+
+  h3 {
     font: {
-      size: 35px;
+      size: 28px;
       weight: 700;
     }
     margin: {
-      bottom: 15px;
+      bottom: 10px;
+    }
+  }
+
+  h4 {
+    font: {
+      weight: 700;
+    }
+    margin: {
+      bottom: 0px;
     }
   }
 
@@ -3023,6 +3107,22 @@ Project Details CSS
       }
     }
   }
+}
+
+/*================================================
+Social Team Icons CSS
+=================================================*/
+.socialTeamsIconsList {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.socialTeamIcon {
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
 }
 
 /*================================================
@@ -3241,6 +3341,104 @@ Screenshot CSS
         visibility: visible;
         opacity: 1;
         transform: scale(1);
+      }
+    }
+  }
+}
+
+/*================================================
+Speakers Content
+=================================================*/
+
+.speakers-content {
+  padding: 20px;
+
+  h3 {
+    font: {
+      size: 23px;
+      weight: 700;
+    }
+    margin-bottom: 8px;
+  }
+
+  span {
+    display: block;
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font: {
+      size: 18px;
+      weight: 600;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 15px 0 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        border: 1px solid $text-color;
+        border-radius: 50%;
+        font-size: 14px;
+        margin: 0 2px;
+        color: $text-color;
+
+        &:hover {
+          color: $white_color;
+          background: $primary;
+          border-color: $primary;
+        }
+
+        &.facebook {
+          border-color: #5580FF;
+          color: #5580FF;
+
+          &:hover {
+            background-color: #5580FF;
+            color: $white_color;
+          }
+        }
+
+        &.instagram {
+          border-color: $black_color;
+          color: $black_color;
+
+          &:hover {
+            background-color: $black_color;
+            color: $white_color;
+          }
+        }
+
+        &.twitter {
+          border-color: #FF8A73;
+          color: #FF8A73;
+
+          &:hover {
+            background-color: #FF8A73;
+            color: $white_color;
+          }
+        }
+
+        &.linkedin {
+          border-color: #FFD474;
+          color: #FFD474;
+
+          &:hover {
+            background-color: #FFD474;
+            color: $white_color;
+          }
+        }
       }
     }
   }
@@ -3786,10 +3984,68 @@ App Download CSS
 }
 
 /*================================================
+Sponsor Logo  CSS
+=================================================*/
+.skeleton-box {
+  display: block;
+  box-shadow: 0 10px 55px 5px rgba(43, 106, 249, 0.17);
+  position: relative;
+  padding: 15px 15px 15px 80px;
+  border-radius: 5px;
+  transition: .4s;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    i {
+      color: $primary-dark;
+    }
+  }
+}
+
+.sponsor-box {
+  display: block;
+  box-shadow: 0 10px 55px 5px rgba(43, 106, 249, 0.17);
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  transition: .4s;
+  box-sizing: border-box;
+
+  img {
+    max-height: 45px;
+  }
+
+  h3 {
+    font: {
+      size: 23px;
+      weight: 700;
+    }
+    margin-bottom: 0px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+
+    i {
+      color: $primary-dark;
+    }
+  }
+}
+
+/*================================================
+Sub Heading  CSS
+=================================================*/
+.sub-heading {
+  text-align: center;
+}
+
+/*================================================
 Platform Connect CSS
 =================================================*/
 .platform-connect {
-  background: $white_color url('../../images/bg-point.png') no-repeat fixed left -600px center/ auto;
 
   h2 {
     text-align: center;
@@ -3812,7 +4068,6 @@ Platform Connect CSS
     padding: 15px 15px 15px 80px;
     border-radius: 5px;
     transition: .4s;
-    background: $white_color;
 
     img {
       position: absolute;
@@ -5207,6 +5462,35 @@ Product Details CSS
 }
 
 /*================================================
+Event Speakers CSS
+=================================================*/
+.event-speakers {
+  position: relative;
+  background: $white_color;
+  z-index: 1;
+  padding: {
+    top: 200px;
+    bottom: 120px;
+  }
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font: {
+      size: 35px;
+      weight: 700;
+    }
+    color: $primary;
+  }
+
+  .bubble-animate {
+    .circle {
+      background: $primary;
+    }
+  }
+}
+
+/*================================================
 Page Title CSS
 =================================================*/
 .page-title-banner {
@@ -5230,7 +5514,7 @@ Page Title CSS
 
   .bubble-animate {
     .circle {
-      background: $white_color;
+      background: $primary;
     }
   }
 }

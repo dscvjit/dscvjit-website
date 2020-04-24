@@ -852,6 +852,11 @@ $paragraph_color: #818992;
       }
     }
   }
+  .project-details-desc {
+    h1 {
+      font-size: 30px;
+    }
+  }
 
   .services-area {
     padding-bottom: 20px;
@@ -889,11 +894,25 @@ $paragraph_color: #818992;
       }
     }
   }
+  .speakers-content {
+    padding: 15px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
   .single-team-member-box {
     .team-content {
       h3 {
         font-size: 20px;
       }
+    }
+  }
+  .speakers-content {
+    padding: 15px;
+
+    h3 {
+      font-size: 20px;
     }
   }
 
@@ -1428,11 +1447,19 @@ $paragraph_color: #818992;
 
   .project-details-desc {
     h3 {
+      &.sub-heading {
+        font-size: 24px
+      }
+
       font-size: 20px;
       margin: {
         bottom: 15px;
         top: 0;
       }
+    }
+
+    h4 {
+      font-size: 19px;
     }
 
     .project-details-information {
@@ -2185,6 +2212,10 @@ $paragraph_color: #818992;
   }
 
   .project-details-desc {
+    h1 {
+      font-size: 31px;
+    }
+
     .project-details-information {
       .single-info-box {
         width: 33.3333%;
@@ -2268,11 +2299,25 @@ $paragraph_color: #818992;
       }
     }
   }
+  .speakers-content {
+    padding: 15px;
+
+    h3 {
+      font-size: 21px;
+    }
+  }
   .single-team-member-box {
     .team-content {
       h3 {
         font-size: 21px;
       }
+    }
+  }
+  .speakers-content {
+    padding: 15px;
+
+    h3 {
+      font-size: 21px;
     }
   }
 
@@ -2487,15 +2532,11 @@ $paragraph_color: #818992;
   .project-details-desc {
     h3 {
       font-size: 21px;
-      margin-top: 20px;
+      margin-top: 8px;
     }
 
-    .project-details-information {
-      .single-info-box {
-        h4 {
-          font-size: 21px;
-        }
-      }
+    h4 {
+      font-size: 21px;
     }
   }
 
@@ -2738,6 +2779,11 @@ $paragraph_color: #818992;
       display: none;
     }
   }
+  .project-details-desc{
+    h1{
+      font-size:30px;
+    }
+  }
   .screenshot-slides {
     &.owl-theme {
       .owl-nav {
@@ -2941,6 +2987,11 @@ $paragraph_color: #818992;
       right: 0;
       top: 40px;
       width: 585px;
+    }
+  }
+  .project-details-desc{
+    h1{
+      font-size:33px;
     }
   }
   .app-download {
