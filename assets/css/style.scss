@@ -2955,6 +2955,16 @@ Project CSS
     img {
       transform-style: unset !important;
       border-radius: 5px;
+
+      .event {
+        min-height: 500px;
+        max-height: 500px
+      }
+
+      .project {
+        max-height: 170px;
+        min-height: 170px;
+      }
     }
   }
 
@@ -3028,9 +3038,14 @@ Project Details CSS
   }
 }
 
+.MuiChip-root {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
 .project-details-desc {
   h1 {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h3 {
@@ -3043,6 +3058,14 @@ Project Details CSS
     }
   }
 
+  h4 {
+    font: {
+      weight: 700;
+    }
+    margin: {
+      bottom: 0px;
+    }
+  }
 
   p {
     margin-bottom: 15px;
@@ -3980,6 +4003,7 @@ Sponsor Logo  CSS
     }
   }
 }
+
 .sponsor-box {
   display: block;
   box-shadow: 0 10px 55px 5px rgba(43, 106, 249, 0.17);
@@ -3990,9 +4014,10 @@ Sponsor Logo  CSS
   transition: .4s;
   box-sizing: border-box;
 
-  img{
-    max-height: 75px;
+  img {
+    max-height: 45px;
   }
+
   h3 {
     font: {
       size: 23px;
@@ -4009,6 +4034,14 @@ Sponsor Logo  CSS
     }
   }
 }
+
+/*================================================
+Sub Heading  CSS
+=================================================*/
+.sub-heading {
+  text-align: center;
+}
+
 /*================================================
 Platform Connect CSS
 =================================================*/

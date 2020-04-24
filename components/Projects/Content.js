@@ -17,7 +17,7 @@ const Content = ({ projects }) => {
                 }}
               >
                 <div className="project-image">
-                  <img src={project.image} alt="work" />
+                  <img className="project" src={project.image} alt="work" />
                 </div>
 
                 <div className="project-content">
