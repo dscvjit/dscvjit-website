@@ -115,7 +115,68 @@ button {
       background: $primary-dark;
     }
   }
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    transition: .4s;
+    background: $primary-dark;
+    z-index: -1;
+    border-radius: 5px;
+  }
 }
+
+.btn-secondary {
+  color: $white_color;
+  background-color: $secondary;
+
+  &:hover, &:focus, &:active {
+    color: $white_color;
+    background: $secondary-dark;
+    transform: translateY(-5px);
+  }
+
+  &.focus, &:focus {
+    box-shadow: unset;
+  }
+
+  &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: unset;
+  }
+
+  &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: $white_color;
+    background: $secondary-dark;
+    transform: translateY(-5px);
+  }
+
+  &.disabled, &:disabled {
+    color: $white_color;
+    background-color: $secondary;
+    border-color: $secondary;
+    opacity: 1;
+
+    &:hover, &:focus {
+      background: $error;
+    }
+  }
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    transition: .4s;
+    background: $secondary-dark;
+    z-index: -1;
+    border-radius: 5px;
+  }
+}
+
 
 .btn {
   font: {
@@ -131,17 +192,6 @@ button {
   z-index: 1;
   transition: .9s;
 
-  &::after, &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 0;
-    transition: .4s;
-    background: $primary-dark;
-    z-index: -1;
-    border-radius: 5px;
-  }
 
   &::after {
     left: 0;
