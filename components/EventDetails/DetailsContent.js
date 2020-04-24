@@ -261,28 +261,6 @@ const DetailsContent = ({ event }) => {
                   </Grid>
                 </>
               )}
-
-              <div className="project-details-information">
-                <div className="single-info-box">
-                  <h4>Conducted By</h4>
-                  <p>DSC Web Team</p>
-                </div>
-
-                <div className="single-info-box">
-                  <h4>Category</h4>
-                  <p>Workshop</p>
-                </div>
-
-                <div className="single-info-box">
-                  <h4>Conducted On</h4>
-                  <p>19-04-2020</p>
-                </div>
-
-                <div className="single-info-box">
-                  <h4>Attendees</h4>
-                  <p>70</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
