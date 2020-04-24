@@ -18,7 +18,7 @@ const Content = ({ events }) => {
                 }}
               >
                 <div className="project-image">
-                  <img src={event.image} alt="work" />
+                  <img className="event" src={event.image} alt="work" />
                 </div>
 
                 <div className="project-content">
@@ -53,7 +53,6 @@ const Content = ({ events }) => {
               </div>
             </div>
           ))}
-
         </div>
       </div>
     </section>
