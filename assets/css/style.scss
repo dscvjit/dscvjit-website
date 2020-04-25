@@ -2956,14 +2956,14 @@ Project CSS
       transform-style: unset !important;
       border-radius: 5px;
 
-      .event {
-        min-height: 500px;
-        max-height: 500px
+      &.event {
+        min-height: 300px;
+        max-height: 300px
       }
 
-      .project {
-        max-height: 170px;
-        min-height: 170px;
+      &.project {
+        max-height: 180px;
+        min-height: 180px;
       }
     }
   }
