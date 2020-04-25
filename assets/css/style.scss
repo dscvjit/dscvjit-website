@@ -3038,10 +3038,6 @@ Project Details CSS
   }
 }
 
-.MuiChip-root {
-  margin-left: 5px !important;
-  margin-right: 5px !important;
-}
 
 .project-details-desc {
   h1 {
@@ -4039,7 +4035,10 @@ Sponsor Logo  CSS
 Sub Heading  CSS
 =================================================*/
 .sub-heading {
-  text-align: center;
+  &.center{
+    text-align: center;
+  }
+  margin-bottom: 8px!important;
 }
 
 /*================================================
@@ -4676,6 +4675,24 @@ Bar CSS
     animation-iteration-count: infinite;
     -webkit-animation-name: MOVE-BG;
     animation-name: MOVE-BG;
+  }
+}
+/*================================================
+Chip CSS
+=================================================*/
+.MuiChip-root{
+  font-family: $font_family !important;
+  font-weight: bold;
+  padding-top:1px !important;
+  &.hashtag{
+    color: $google-yellow;
+    border-color: $font_family;
+
+    &:hover{
+      color: $white_color;
+      background: $google-yellow;
+      border-color: $google-yellow;
+    }
   }
 }
 
