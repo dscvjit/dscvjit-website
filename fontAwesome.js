@@ -13,7 +13,9 @@ import {
   faAt,
   faMapMarkerAlt,
   faWindowMaximize,
-  faTable
+  faTable,
+  faLongArrowAltLeft,
+  faLongArrowAltRight
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -27,5 +29,7 @@ library.add(
   faAt,
   faMapMarkerAlt,
   faTable,
-  faWindowMaximize
+  faWindowMaximize,
+  faLongArrowAltLeft,
+  faLongArrowAltRight
 );

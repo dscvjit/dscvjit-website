@@ -63,6 +63,12 @@ img {
   }
 }
 
+.pt-50{
+  padding:{
+    top:50px
+  }
+}
+
 .bg-gray {
   background-color: #edf5ff;
 }
@@ -2956,14 +2962,18 @@ Project CSS
       transform-style: unset !important;
       border-radius: 5px;
 
-      .event {
-        min-height: 500px;
-        max-height: 500px
+      &.event {
+        min-height: 300px;
+        max-height: 300px
       }
 
-      .project {
-        max-height: 170px;
-        min-height: 170px;
+      &.project {
+        max-height: 180px;
+        min-height: 180px;
+      }
+      &.recent-projects{
+        max-height: 250px;
+        min-height: 250px;
       }
     }
   }
@@ -3038,10 +3048,6 @@ Project Details CSS
   }
 }
 
-.MuiChip-root {
-  margin-left: 5px !important;
-  margin-right: 5px !important;
-}
 
 .project-details-desc {
   h1 {
@@ -4039,7 +4045,11 @@ Sponsor Logo  CSS
 Sub Heading  CSS
 =================================================*/
 .sub-heading {
-  text-align: center;
+  &.center {
+    text-align: center;
+  }
+
+  margin-bottom: 8px !important;
 }
 
 /*================================================
@@ -4676,6 +4686,26 @@ Bar CSS
     animation-iteration-count: infinite;
     -webkit-animation-name: MOVE-BG;
     animation-name: MOVE-BG;
+  }
+}
+
+/*================================================
+Chip CSS
+=================================================*/
+.MuiChip-root {
+  font-family: $font_family !important;
+  font-weight: bold;
+  padding-top: 1px !important;
+
+  &.hashtag {
+    color: $google-yellow;
+    border-color: $font_family;
+
+    &:hover {
+      color: $white_color;
+      background: $google-yellow;
+      border-color: $google-yellow;
+    }
   }
 }
 

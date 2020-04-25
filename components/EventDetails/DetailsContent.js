@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Chip } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
@@ -38,6 +38,23 @@ const DetailsContent = ({ event }) => {
           <div className="col-lg-12 col-md-12">
             <div className="project-details-desc">
               <h1>{event.name}</h1>
+              <Grid
+                className={'mb-1'}
+                container
+                alignItems={'center'}
+                justify={'flex-start'}
+                spacing={1}
+              >
+                {event['hashtags'].map((hashtag) => (
+                  <Grid item>
+                    <Chip
+                      variant={'outlined'}
+                      className={'hashtag'}
+                      label={hashtag}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
 
               <Grid
                 className="mb-0"
@@ -102,7 +119,9 @@ const DetailsContent = ({ event }) => {
                 <>Error {speakersError.message}</>
               ) : (
                 <>
-                  <h3 className={'sub-heading'}>Meet the Speakers / Guests</h3>
+                  <h3 className={'sub-heading center'}>
+                    Meet the Speakers / Guests
+                  </h3>
                   <Grid
                     className={'my-1'}
                     container
@@ -206,7 +225,9 @@ const DetailsContent = ({ event }) => {
                 <>Unable to fetch sponsors Error: {partnersError.message}</>
               ) : (
                 <>
-                  <h3 className={'sub-heading '}>Event Partners / Sponsors</h3>
+                  <h3 className={'sub-heading center'}>
+                    Event Partners / Sponsors
+                  </h3>
                   <Grid
                     className={'my-1'}
                     container
