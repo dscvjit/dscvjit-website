@@ -24,14 +24,14 @@ const DetailsContent = ({ project }) => {
                 direction="row"
                 justify="flex-start"
                 alignItems="center"
-                spacing={2}
+                spacing={1}
               >
-                <Grid container item lg={3} md={3} sm={4} xs={12}>
+                <Grid container item lg={3} md={3} sm={4} xs={6}>
                   <h5>
                     <b>Category:</b> {project.category}
                   </h5>
                 </Grid>
-                <Grid container lg={3} md={3} sm={4} xs={12} item>
+                <Grid container lg={3} md={3} sm={4} xs={6} item>
                   <h5>
                     <b>Date:</b> {project.date}
                   </h5>
@@ -40,7 +40,7 @@ const DetailsContent = ({ project }) => {
 
               <Grid
                 container
-                className={'mb-1'}
+                className={'mb-2'}
                 spacing={2}
                 direction="column"
                 alignItems={'flex-start'}
@@ -53,8 +53,9 @@ const DetailsContent = ({ project }) => {
                   justify={'flex-start'}
                   alignItems="center"
                   direction="row"
+                  spacing={2}
                 >
-                  <Grid item lg={2} md={3} sm={3} xs={6}>
+                  <Grid item>
                     {project.links.repo !== '' ? (
                       <div className="single-info-box">
                         <a
@@ -69,7 +70,7 @@ const DetailsContent = ({ project }) => {
                       <></>
                     )}
                   </Grid>
-                  <Grid item lg={2} md={3} sm={3} xs={6}>
+                  <Grid item>
                     {project.links.demo !== '' ? (
                       <div className="single-info-box">
                         <a
@@ -85,29 +86,42 @@ const DetailsContent = ({ project }) => {
                     )}
                   </Grid>
                 </Grid>
-                <Grid item container alignItems="center" direction="row">
-                  <h4>Developed By: </h4>
+                <Grid
+                  item
+                  container
+                  alignItems="center"
+                  direction="row"
+                  spacing={1}
+                >
+                  <Grid item>
+                    <h4>Developed By: </h4>
+                  </Grid>
                   {project['developedBy'].map((member) => (
-                    <Chip
-                      className={'chip-spacing'}
-                      variant={'outlined'}
-                      label={member}
-                    />
+                    <Grid item>
+                      <Chip variant={'outlined'} label={member} />
+                    </Grid>
                   ))}
                 </Grid>
-                <Grid item container alignItems="center" direction="row">
-                  <h4>Supported By: </h4>
+                <Grid
+                  item
+                  container
+                  alignItems="center"
+                  direction="row"
+                  spacing={1}
+                >
+                  <Grid item>
+                    <h4>Supported By: </h4>
+                  </Grid>
+
                   {project['supportedBy'].map((member) => (
-                    <Chip
-                      className={'chip-spacing'}
-                      variant={'outlined'}
-                      label={member}
-                    />
+                    <Grid item>
+                      <Chip variant={'outlined'} label={member} />
+                    </Grid>
                   ))}
                 </Grid>
               </Grid>
 
-              <h4>Description: </h4>
+              <h4 className={'sub-heading'}>Description: </h4>
               <p>{project.des}</p>
             </div>
           </div>

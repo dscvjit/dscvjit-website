@@ -10,16 +10,13 @@ const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
   autoplay: true,
-  nav: true,
+  nav: false,
   loop: false,
   mouseDrag: true,
   autoplayHoverPause: true,
   responsiveClass: true,
   dots: false,
-  navText: [
-    "<i class='icofont-bubble-left'/>",
-    "<i class='icofont-bubble-right'/>"
-  ],
+
   responsive: {
     0: {
       items: 1
@@ -45,7 +42,7 @@ const RecentProjects = () => {
 
   return (
     <>
-      <section className="project-area ptb-100">
+      <section className="project-area pt-50">
         <div className="container">
           <div className="section-title">
             <h2>Recent Projects</h2>
@@ -106,7 +103,11 @@ const RecentProjects = () => {
                       }}
                     >
                       <div className="project-image">
-                        <img src={project.image} alt="work" />
+                        <img
+                          className={'recent-projects'}
+                          src={project.image}
+                          alt="work"
+                        />
                       </div>
 
                       <div className="project-content">
@@ -126,7 +127,6 @@ const RecentProjects = () => {
             )}
           </div>
         )}
-        <canvas id="canvas"></canvas>
       </section>
     </>
   );

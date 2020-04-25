@@ -28,6 +28,10 @@ $paragraph_color: #818992;
       bottom: 50px;
     }
   }
+  .shape8 {
+    top: 80%;
+    left: 10%;
+  }
   .section-title {
     margin-bottom: 30px;
 
@@ -1453,13 +1457,16 @@ $paragraph_color: #818992;
 
       font-size: 20px;
       margin: {
-        bottom: 15px;
         top: 0;
       }
     }
 
     h4 {
       font-size: 19px;
+    }
+
+    h5 {
+      font-size: 17px
     }
 
     .project-details-information {
@@ -2779,9 +2786,9 @@ $paragraph_color: #818992;
       display: none;
     }
   }
-  .project-details-desc{
-    h1{
-      font-size:30px;
+  .project-details-desc {
+    h1 {
+      font-size: 30px;
     }
   }
   .screenshot-slides {
@@ -2989,9 +2996,9 @@ $paragraph_color: #818992;
       width: 585px;
     }
   }
-  .project-details-desc{
-    h1{
-      font-size:33px;
+  .project-details-desc {
+    h1 {
+      font-size: 33px;
     }
   }
   .app-download {
