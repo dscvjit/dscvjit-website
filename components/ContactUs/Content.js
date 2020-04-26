@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 class Content extends Component {
   render() {
@@ -10,12 +12,12 @@ class Content extends Component {
             <div className="col-lg-4 col-md-6">
               <div className="contact-info-box">
                 <div className="icon">
-                  <i className="icofont-email"></i>
+                  <FontAwesomeIcon icon={["fas","at"]}/>
                 </div>
                 <h3>Email</h3>
                 <p>
                   <Link href="#">
-                    <a>dscvjit@gmail.com</a>
+                    <a>dscvjitclub@gmail.com</a>
                   </Link>
                 </p>
               </div>
@@ -24,7 +26,7 @@ class Content extends Component {
             <div className="col-lg-4 col-md-6">
               <div className="contact-info-box">
                 <div className="icon">
-                  <i className="icofont-google-map"></i>
+                  <FontAwesomeIcon icon={["fas","map-marker-alt"]}/>
                 </div>
                 <h3>Address</h3>
                 <p>Aziz Nagar, VJIT</p>
@@ -34,7 +36,7 @@ class Content extends Component {
             <div className="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
               <div className="contact-info-box">
                 <div className="icon">
-                  <i className="icofont-phone"></i>
+                  <FontAwesomeIcon icon={["fas","phone-alt"]}/>
                 </div>
                 <h3>Phone Number</h3>
                 <p>
