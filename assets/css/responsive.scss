@@ -892,6 +892,11 @@ $paragraph_color: #818992;
     padding-bottom: 20px;
   }
   .single-team-member {
+    img {
+      min-height: 330px;
+      max-height: 330px;
+    }
+
     .team-content {
       h3 {
         font-size: 20px;
