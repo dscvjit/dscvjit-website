@@ -6,15 +6,17 @@ import { getAllProjects } from '../../service/service';
 import Skeleton from '@material-ui/lab/Skeleton';
 
 const Content = (props) => {
-  const projects = props.projects;
+  const projectsProps = props.projects;
   const fetcher = () => getAllProjects();
-  const { data, error } = useSWR('/projects', fetcher, { projects });
+  const { data: projects, error } = useSWR('/projects', fetcher, {
+    projectsProps
+  });
   const skeletonArray = Array.from(new Array(6));
   return (
     <section className="project-area ptb-100">
       <div className="container">
         <div className="row">
-          {!data
+          {!projects
             ? skeletonArray.map((value, index) => (
                 <div className="col-lg-4 col-md-6" key={index}>
                   <div className="single-project">
@@ -34,7 +36,7 @@ const Content = (props) => {
                   </div>
                 </div>
               ))
-            : data.data.map((project) => (
+            : projects.data.map((project) => (
                 <div className="col-lg-4 col-md-6" key={project.id}>
                   <div
                     className="single-project"

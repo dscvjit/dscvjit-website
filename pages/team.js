@@ -3,19 +3,24 @@ import Navbar from '../components/Layouts/Navbar';
 import Footer from '../components/Layouts/Footer';
 import Banner from '../components/Team/Banner';
 import Members from '../components/Team/Members';
-import NoSSR from 'react-no-ssr';
+import { getAllTeam } from '../service/service';
 
-const Team = () => {
-  return (
-    <>
-      <Navbar />
-      <Banner />
-      <NoSSR>
-        <Members />
-      </NoSSR>
-      <Footer />
-    </>
-  );
-};
+class Team extends React.Component {
+  static async getInitialProps(ctx) {
+    const res = await getAllTeam();
+    return { members: res.data };
+  }
+
+  render() {
+    return (
+      <>
+        <Navbar />
+        <Banner />
+        <Members members={this.props.members} />
+        <Footer />
+      </>
+    );
+  }
+}
 
 export default Team;
