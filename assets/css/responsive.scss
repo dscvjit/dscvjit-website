@@ -937,10 +937,12 @@ $paragraph_color: #818992;
         min-height: 225px;
         max-height: 250px
       }
+
       .project {
         min-height: 225px;
         max-height: 250px
       }
+
       .recent-projects {
         min-height: 225px;
         max-height: 225px
@@ -1688,7 +1690,6 @@ $paragraph_color: #818992;
   .footer-area {
     .single-footer-widget {
       padding: 0 !important;
-      margin-bottom: 30px;
 
       h3 {
         font-size: 20px;
@@ -1697,7 +1698,6 @@ $paragraph_color: #818992;
     }
 
     .copyright-area {
-      margin-top: 20px;
       text-align: center;
 
       ul {
