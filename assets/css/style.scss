@@ -6375,6 +6375,22 @@ Footer CSS
   }
 }
 
+.agenda-table {
+  font-family: $font_family;
+
+  thead {
+    th{
+      font-weight: 700;
+    }
+  }
+
+  th {
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+  }
+}
+
 /*================================================
 Back To Top CSS
 =================================================*/

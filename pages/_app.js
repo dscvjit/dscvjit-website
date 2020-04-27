@@ -6,7 +6,6 @@ import '../assets/css/style.scss';
 import '../assets/css/responsive.scss';
 import '../assets/css/animate.css';
 
-import { Provider } from 'react-redux';
 import { Preloader, Placeholder } from 'react-preloading-screen';
 import App from 'next/app';
 import { DefaultSeo } from 'next-seo';
