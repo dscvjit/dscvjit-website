@@ -2922,6 +2922,7 @@ Project CSS
     }
   }
 
+
   .project-image {
     position: relative;
 
@@ -2994,6 +2995,12 @@ Project CSS
         transform: scale(1);
       }
     }
+  }
+}
+
+.code {
+  p {
+    font-size: 18px;
   }
 }
 
