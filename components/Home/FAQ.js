@@ -15,13 +15,18 @@ class FAQ extends Component {
           <div className="section-title">
             <h2>FAQ</h2>
             <div className="bar" />
-            <p>Some sub content for the FAQ</p>
+            <p>
+              The below are some of the frequently asked questions by the
+              students
+            </p>
           </div>
           <div className="faq-accordion">
             <Accordion allowZeroExpanded={true}>
               <AccordionItem>
                 <AccordionItemHeading>
-                  <AccordionItemButton>Faq 1?</AccordionItemButton>
+                  <AccordionItemButton>
+                    I am not from CSE branch, Can I join DSC VJIT ?
+                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
@@ -32,7 +37,9 @@ class FAQ extends Component {
               </AccordionItem>
               <AccordionItem>
                 <AccordionItemHeading>
-                  <AccordionItemButton>Faq 2?</AccordionItemButton>
+                  <AccordionItemButton>
+                    I am from first year branch, Am I allowed to join ?
+                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
@@ -43,7 +50,10 @@ class FAQ extends Component {
               </AccordionItem>
               <AccordionItem>
                 <AccordionItemHeading>
-                  <AccordionItemButton>Faq 3?</AccordionItemButton>
+                  <AccordionItemButton>
+                    I dont have much technical knowledge but I would like to
+                    help DSC VJIT
+                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
@@ -54,36 +64,15 @@ class FAQ extends Component {
               </AccordionItem>
               <AccordionItem>
                 <AccordionItemHeading>
-                  <AccordionItemButton>Faq 4?</AccordionItemButton>
+                  <AccordionItemButton>
+                    How can I join the DSC VJIT Organizing Team
+                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
                     If you experiment or ease with a mediocre blessing,
                     everything desires you. The lama meets intuition which is
                     not simple.
-                  </p>
-                </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>Faq 5?</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p className="accordion-content">
-                    When one receives beauty and zen, one is able to shape
-                    happiness. The seeker experiences mind which is not
-                    powerful.
-                  </p>
-                </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>Faq 6?</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p className="accordion-content">
-                    When one meets dogma and solitude, one is able to visualize
-                    extend. A pictorial form of justice is the truth.
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
