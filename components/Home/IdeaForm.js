@@ -10,30 +10,29 @@ class IdeaForm extends Component {
               <div className="analysis-text">
                 <h3>Have an Awesome Idea, Lets BrainStorm</h3>
                 <div className={'bar'} />
-                <p>The points/rules for the brainstorming : </p>
-                <ul>
-                  <li>
-                    All closest moons meet each other, only alchemistic
-                    individuals have a fear. A fraternal form of volume is the
-                    beauty.
-                  </li>
-
-                  <li>
-                    If you fly or empower with a holographic density, core loves
-                    you. A new form of freedom is the dimension.
-                  </li>
-
-                  <li>
-                    All small things grasp each other, only closest seekers have
-                    a moonlight. The sinner illuminates love which is not
-                    inward.
-                  </li>
-
-                  <li>
-                    When one meets trust and thought, one is able to feel
-                    everything. The wind hears afterlife which is not occult.
-                  </li>
-                </ul>
+                <div className={'code'}>
+                  <p className="mb-1">
+                    <b>Input:</b>
+                  </p>
+                  <p className="mb-1">
+                    const <b>idea</b> = ["Revolutionary Idea"];
+                  </p>
+                  <p className="mb-1">
+                    if(
+                    <b>
+                      ! idea.includes("technicalKnowledge" || "developers" ||
+                      {'  '}"domainKnowledge" || "designers "{' '}
+                    </b>
+                    ){' { '}
+                  </p>
+                  <p className="ml-4">
+                    <b>submitIdea();</b>
+                  </p>
+                  <p className="mb-1">{' } '}</p>
+                  <p className="mb-1">
+                    <b>Output: </b>helpReceived()
+                  </p>
+                </div>
               </div>
             </div>
 

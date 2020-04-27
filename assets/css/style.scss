@@ -66,7 +66,12 @@ img {
 .pt-50 {
   padding: {
     top: 50px
+
   }
+}
+.ptb-50{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .bg-gray {
@@ -2922,6 +2927,7 @@ Project CSS
     }
   }
 
+
   .project-image {
     position: relative;
 
@@ -2994,6 +3000,12 @@ Project CSS
         transform: scale(1);
       }
     }
+  }
+}
+
+.code {
+  p {
+    font-size: 18px;
   }
 }
 
@@ -6253,10 +6265,9 @@ Footer CSS
   .single-footer-widget {
     .logo {
       display: block;
-      margin-bottom: 20px;
 
       img {
-        max-width: 130px;
+        max-width: 200px;
         height: auto;
       }
     }
@@ -6334,7 +6345,6 @@ Footer CSS
 
 .copyright-area {
   padding: 30px 0;
-  margin-top: 100px;
   border-top: 1px solid #eeeeee;
 
   ul {

@@ -5,6 +5,8 @@ import cloudLogo from '../../images/icons/cloud-logo.svg';
 import reactLogo from '../../images/icons/react-logo.svg';
 import machineLogo from '../../images/icons/machine-learning-logo.svg';
 import pythonLogo from '../../images/icons/python-logo.svg';
+import websiteLogo from '../../images/icons/website.svg';
+import iotLogo from '../../images/icons/iot.svg';
 
 class Technologies extends Component {
   render() {
@@ -13,28 +15,28 @@ class Technologies extends Component {
         <div className="container">
           <div className="section-title">
             <h2>Technologies</h2>
-            <div className="bar"></div>
+            <div className="bar" />
             <p>
-              These are some technolgies we mainly focus on right now. If you
-              cant find the technology you love. Click here!!!
+              These are some of the technologies we mainly try to focus at DSC
+              VJIT
             </p>
+            <a href={'#'} className="btn btn-primary mt-2">
+              Add More
+            </a>
           </div>
 
           <div className="row">
             <div className="col-lg-4 col-md-6">
               <div className="single-services">
-                <img src={javascriptLogo} alt="javascript" />
-                <h3>JavaScript</h3>
-                <p>Sub Content</p>
+                <img src={websiteLogo} alt="website" />
+                <h3>Website Development</h3>
               </div>
             </div>
-
             <div className="col-lg-4 col-md-6">
               <div className="single-services">
                 <img src={androidLogo} alt="android" />
 
                 <h3>Android App Development</h3>
-                <p>Sub Content</p>
               </div>
             </div>
 
@@ -43,16 +45,20 @@ class Technologies extends Component {
                 <img src={cloudLogo} alt="cloud logo" />
 
                 <h3>Google Cloud</h3>
-                <p>Sub Content</p>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6">
               <div className="single-services">
-                <img src={reactLogo} alt="react" />
+                <img src={machineLogo} alt="machine" />
+                <h3>Machine Learning</h3>
+              </div>
+            </div>
 
-                <h3>React JS</h3>
-                <p>Sub Content</p>
+            <div className="col-lg-4 col-md-6">
+              <div className="single-services">
+                <img src={iotLogo} alt="iot" />
+                <h3>Internet Of Things</h3>
               </div>
             </div>
 
@@ -61,16 +67,19 @@ class Technologies extends Component {
                 <img src={pythonLogo} alt="python" />
 
                 <h3>Python</h3>
-                <p>Sub Content</p>
               </div>
             </div>
-
             <div className="col-lg-4 col-md-6">
               <div className="single-services">
-                <img src={machineLogo} alt="machine" />
+                <img src={javascriptLogo} alt="javascript" />
+                <h3>JavaScript</h3>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="single-services">
+                <img src={reactLogo} alt="react" />
 
-                <h3>Machine Learning</h3>
-                <p>Sub Content</p>
+                <h3>React JS</h3>
               </div>
             </div>
           </div>
