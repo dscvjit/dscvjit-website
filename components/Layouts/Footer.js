@@ -22,22 +22,22 @@ class Footer extends Component {
                 </p>
                 <ul className="social-list">
                   <li>
-                    <a href="https://facebook.com">
+                    <a href="https://www.facebook.com/dscvjit/">
                       <FontAwesomeIcon icon={['fab', 'facebook-f']} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com">
+                    <a href="https://twitter.com/dscvjit">
                       <FontAwesomeIcon icon={['fab', 'twitter']} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com">
+                    <a href="https://www.instagram.com/dscvjit/">
                       <FontAwesomeIcon icon={['fab', 'instagram']} />
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com">
+                    <a href="https://github.com/dscvjit">
                       <FontAwesomeIcon icon={['fab', 'github']} />
                     </a>
                   </li>
