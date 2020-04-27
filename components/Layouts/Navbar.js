@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'next/router';
-import { connect } from 'react-redux';
 import Link from '../../utils/ActiveLink';
 import SearchForm from './SearchForm';
 import dsclogo from '../../images/dsclogo.webp';
@@ -135,10 +134,4 @@ class Navbar extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.addedItems
-  };
-};
-
-export default withRouter(connect(mapStateToProps)(Navbar));
+export default withRouter(Navbar);
