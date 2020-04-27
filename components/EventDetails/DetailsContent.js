@@ -119,9 +119,7 @@ const DetailsContent = ({ event }) => {
                 <>Error {speakersError.message}</>
               ) : (
                 <>
-                  <h3 className={'sub-heading center'}>
-                    Meet the Speakers / Guests
-                  </h3>
+                  <h3 className={'sub-heading'}>Meet the Speakers / Guests</h3>
                   <Grid
                     className={'my-1'}
                     container
@@ -225,9 +223,7 @@ const DetailsContent = ({ event }) => {
                 <>Unable to fetch sponsors Error: {partnersError.message}</>
               ) : (
                 <>
-                  <h3 className={'sub-heading center'}>
-                    Event Partners / Sponsors
-                  </h3>
+                  <h3 className={'sub-heading'}>Event Partners / Sponsors</h3>
                   <Grid
                     className={'my-1'}
                     container
