@@ -63,9 +63,9 @@ img {
   }
 }
 
-.pt-50{
-  padding:{
-    top:50px
+.pt-50 {
+  padding: {
+    top: 50px
   }
 }
 
@@ -2971,7 +2971,8 @@ Project CSS
         max-height: 180px;
         min-height: 180px;
       }
-      &.recent-projects{
+
+      &.recent-projects {
         max-height: 250px;
         min-height: 250px;
       }
@@ -3516,6 +3517,8 @@ Team CSS
   border-radius: 5px;
 
   img {
+    min-height: 255px;
+    max-height: 255px;
     border-radius: 5px 5px 0 0;
   }
 
