@@ -933,23 +933,17 @@ $paragraph_color: #818992;
     }
 
     .project-image {
-      img {
-        &.event {
-          min-height: 225px;
-          max-height: 250px
-        }
-
-        &.project {
-          min-height: 225px;
-          max-height: 250px
-        }
-
-        &.recent-projects {
-          min-height: 225px;
-          max-height: 250px
-        }
-
-
+      .event {
+        min-height: 225px;
+        max-height: 250px
+      }
+      .project {
+        min-height: 225px;
+        max-height: 250px
+      }
+      .recent-projects {
+        min-height: 225px;
+        max-height: 225px
       }
     }
   }
@@ -1802,21 +1796,19 @@ $paragraph_color: #818992;
   .single-project {
 
     .project-image {
-      img {
-        &.event {
-          min-height: 225px;
-          max-height: 225px
-        }
+      .event {
+        min-height: 225px;
+        max-height: 225px
+      }
 
-        &.project {
-          min-height: 200px;
-          max-height: 200px
-        }
+      .project {
+        min-height: 200px;
+        max-height: 200px
+      }
 
-        &.recent-projects {
-          min-height: 200px;
-          max-height: 200px
-        }
+      .recent-projects {
+        min-height: 200px;
+        max-height: 200px
       }
     }
   }
@@ -2812,21 +2804,19 @@ $paragraph_color: #818992;
   .single-project {
 
     .project-image {
-      img {
-        &.event {
-          min-height: 275px;
-          max-height: 275px
-        }
+      .event {
+        min-height: 275px;
+        max-height: 275px
+      }
 
-        &.project {
-          min-height: 200px;
-          max-height: 200px
-        }
+      .project {
+        min-height: 200px;
+        max-height: 200px
+      }
 
-        &.recent-projects {
-          min-height: 275px;
-          max-height: 275px
-        }
+      .recent-projects {
+        min-height: 275px;
+        max-height: 275px
       }
     }
   }

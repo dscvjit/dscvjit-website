@@ -64,19 +64,17 @@ const RecentProjects = () => {
               >
                 {numberArray.map((item, index) => (
                   <div className="col-lg-12" key={index}>
-                    <div
-                      className="single-project"
-                      style={{ cursor: 'pointer' }}
-                      onClick={() => {
-                        Router.push(`/projects/id`);
-                      }}
-                    >
+                    <div className="single-project">
                       <div className="project-image">
-                        <Skeleton variant="rect" width={'100%'} height={250} />
+                        <Skeleton
+                          className={'recent-projects'}
+                          variant="rect"
+                          width={'100%'}
+                        />
                       </div>
                       <div className="project-content">
-                        <Skeleton />
                         <Skeleton width="60%" />
+                        <Skeleton variant="text" />
                       </div>
                     </div>
                   </div>

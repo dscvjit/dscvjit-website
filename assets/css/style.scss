@@ -2961,22 +2961,23 @@ Project CSS
     img {
       transform-style: unset !important;
       border-radius: 5px;
-
-      &.event {
-        min-height: 300px;
-        max-height: 300px
-      }
-
-      &.project {
-        max-height: 180px;
-        min-height: 180px;
-      }
-
-      &.recent-projects {
-        max-height: 250px;
-        min-height: 250px;
-      }
     }
+
+    .event {
+      min-height: 300px;
+      max-height: 300px
+    }
+
+    .project {
+      max-height: 180px;
+      min-height: 180px;
+    }
+
+    .recent-projects {
+      max-height: 250px;
+      min-height: 250px;
+    }
+
   }
 
   &:hover {
