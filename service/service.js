@@ -145,6 +145,36 @@ export const getAllProjects = () => {
   });
 };
 
+export const getRecentProjects = () => {
+  let projects = [];
+  return new Promise((resolve, reject) => {
+    db.collection('projects')
+      .orderBy('date', 'asc')
+      .limit(8)
+      .get()
+      .then((doc) => {
+        if (doc.empty) {
+          resolve({
+            success: false,
+            data: {}
+          });
+        }
+        if (Object.keys(doc).length > 0) {
+          doc.forEach((res) => {
+            projects.push(res.data());
+          });
+          resolve({
+            success: true,
+            data: projects
+          });
+        }
+      })
+      .catch((e) => {
+        reject(e);
+      });
+  });
+};
+
 export const getSpecificProject = (id) => {
   return new Promise((resolve, reject) => {
     db.collection('projects')

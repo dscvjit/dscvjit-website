@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Router from 'next/router';
-import { getAllProjects } from '../../service/service';
+import { getRecentProjects } from '../../service/service';
 import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
 
@@ -32,7 +32,7 @@ const options = {
 
 const RecentProjects = () => {
   const [display, setDisplay] = useState(false);
-  const fetcher = () => getAllProjects();
+  const fetcher = () => getRecentProjects();
   const { data, error } = useSWR('/projects', fetcher);
   const numberArray = Array.from(new Array(4));
 
