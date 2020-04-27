@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
 import homeWhatImage from '../../images/home-what.webp';
 import homeWhyImage from '../../images/home-why.webp';
 import homeLastImage from '../../images/home-last.png';
@@ -12,27 +11,20 @@ class Overview extends Component {
           <div className="overview-box">
             <div className="row h-100 justify-content-center align-items-center">
               <div className="col-lg-6 col-md-6 overview-img">
-                <img src={homeWhatImage} alt="image" />
+                <img src={homeWhyImage} alt="image" />
               </div>
 
               <div className="col-lg-6 col-md-6 overview-content">
                 <div className="features-holder-content">
                   <div className="section-title">
-                    <h2>What is Developer Student Clubs</h2>
-                    <div className="bar"></div>
+                    <h2>Connect With DSC VJIT</h2>
+                    <div className="bar" />
                     <p>
-                      Developer Student Clubs are university based community
-                      groups for students interested in Google developer
-                      technologies. Students from all undergraduate or graduate
-                      programs with an interest in growing as a developer are
-                      welcome. By joining a DSC, students grow their knowledge
-                      in a peer-to-peer learning environment and build solutions
-                      for local businesses and their community.
+                      Meet other students on campus interested in developer
+                      technologies. All are welcome, including those with
+                      diverse backgrounds and different majors.
                     </p>
                   </div>
-                  <Link href="#">
-                    <a className="btn btn-primary">Read More</a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -44,23 +36,18 @@ class Overview extends Component {
                 <div className="features-holder-content">
                   <div className="section-title">
                     <h2>Why Join DSC VJIT</h2>
-                    <div className="bar"></div>
+                    <div className="bar" />
                     <p>
-                      The sailor marks with courage, love the brig until it
-                      sings. Salty, fine mates impatiently endure a golden,
-                      coal-black ship. The bucaneer hoists with endurance,
-                      command the bikini atoll before it falls. Girls grow with
-                      faith.
+                      Learn about a wide range of technical topics where new
+                      skills are gained through hands-on workshops, in-person
+                      training and project building activities.
                     </p>
                   </div>
-                  <Link href="#">
-                    <a className="btn btn-primary">Join DSC VJIT</a>
-                  </Link>
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-6 overview-img">
-                <img src={homeWhyImage} alt="image" />
+                <img src={homeWhatImage} alt="image" />
               </div>
             </div>
           </div>
@@ -74,19 +61,15 @@ class Overview extends Component {
               <div className="col-lg-6 col-md-6 overview-content">
                 <div className="features-holder-content">
                   <div className="section-title">
-                    <h2>Some Another Catchy Title ? </h2>
-                    <div className="bar"></div>
+                    <h2>Grow With DSC VJIT</h2>
+                    <div className="bar" />
                     <p>
-                      The kraken ransacks with love, command the quarter-deck
-                      before it dies. The cloud crushes with fortune, vandalize
-                      the fortress. The grog hails with strength, view the
-                      bikini atoll until it whines. Yardarms laugh with
-                      strength.
+                      Apply your new learnings and connections to build great
+                      solutions for local problems. Advance your skills, career
+                      and network. Give back to your community by helping others
+                      learn as well.
                     </p>
                   </div>
-                  <Link href="#">
-                    <a className="btn btn-primary">Catchy Button :)</a>
-                  </Link>
                 </div>
               </div>
             </div>

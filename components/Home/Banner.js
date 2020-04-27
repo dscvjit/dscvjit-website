@@ -42,11 +42,11 @@ class Banner extends React.Component {
                       </h1>
                       <h1 style={{ fontWeight: 700 }}>VJIT</h1>
                       <p>
-                        DSC VJIT is one of the different Developer Students Club
-                        throughout India. Our main goal at DSC VJIT is to
-                        increase the skills, collaboration among students and to
-                        create a community which help solve the different issues
-                        which are faced around our locality.
+                        Developer Student Clubs are university based community
+                        groups for students interested in Google developer
+                        technologies. Students from all undergraduate or
+                        graduate programs with an interest in growing as a
+                        developer are welcome.
                       </p>
 
                       <Link href="/">
