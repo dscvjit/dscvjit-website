@@ -5,9 +5,10 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Members = () => {
+const Members = (props) => {
+  const membersProps = props.members;
   const fetcher = () => getAllTeam();
-  const { data, error } = useSWR('/team', fetcher);
+  const { data: members, error } = useSWR('/team', fetcher, { membersProps });
   const skeletonArray = Array.from(new Array(4));
 
   return (
@@ -19,7 +20,7 @@ const Members = () => {
               Unable to fetch the members due to an error:{' '}
               <strong>{error}</strong>
             </>
-          ) : !data || data === '' ? (
+          ) : !members || members === '' ? (
             skeletonArray.map((item, index) => (
               <div className="col-lg-3 col-md-6" key={index}>
                 <div className="single-team-member">
@@ -50,7 +51,7 @@ const Members = () => {
               </div>
             ))
           ) : (
-            data.data.map((member) => (
+            members.data.map((member) => (
               <div className="col-lg-3 col-md-6" key={member.id}>
                 <div className="single-team-member">
                   <img src={member.image} alt="team" />
