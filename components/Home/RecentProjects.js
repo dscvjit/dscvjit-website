@@ -48,8 +48,7 @@ const RecentProjects = () => {
             <h2>Recent Projects</h2>
             <div className="bar"></div>
             <p>
-              Catchy sub content for the recent projects - These are the
-              different projects for developed
+              The below projects are some of our recent projects in DSC VJIT
             </p>
           </div>
         </div>
