@@ -4,6 +4,8 @@ export const getAllEvents = () => {
   let events = [];
   return new Promise((resolve, reject) => {
     db.collection('events')
+      .where('visible', '==', true)
+
       .get()
       .then((doc) => {
         if (doc.empty) {
@@ -121,6 +123,8 @@ export const getAllProjects = () => {
   let projects = [];
   return new Promise((resolve, reject) => {
     db.collection('projects')
+      .where('visible', '==', true)
+
       .get()
       .then((doc) => {
         if (doc.empty) {
@@ -149,7 +153,7 @@ export const getRecentProjects = () => {
   let projects = [];
   return new Promise((resolve, reject) => {
     db.collection('projects')
-      .orderBy('date', 'asc')
+      .where('visible', '==', true)
       .limit(8)
       .get()
       .then((doc) => {
@@ -210,6 +214,8 @@ export const getAllTeam = () => {
   let team = [];
   return new Promise((resolve, reject) => {
     db.collection('team')
+      .where('visible', '==', true)
+
       .get()
       .then((doc) => {
         if (doc.empty) {
