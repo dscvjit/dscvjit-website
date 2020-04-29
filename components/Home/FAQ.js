@@ -30,8 +30,8 @@ class FAQ extends Component {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
-                    When one views music and death, one is able to forget
-                    happiness. A beloved form of beauty is the ascension.
+                    Any branch student can join DSC VJIT, there is no
+                    restriction to join the club
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -43,8 +43,8 @@ class FAQ extends Component {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
-                    When one studies moonlight and living, one is able to handle
-                    mineral. The yogi realizes mineral which is not embittered.
+                    Students from any year can join DSC VJIT and contribute to
+                    the club
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -57,22 +57,9 @@ class FAQ extends Component {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p className="accordion-content">
-                    When one gains bliss and art, one is able to witness
-                    relativity. A special form of light is the heaven.
-                  </p>
-                </AccordionItemPanel>
-              </AccordionItem>
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    How can I join the DSC VJIT Organizing Team
-                  </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <p className="accordion-content">
-                    If you experiment or ease with a mediocre blessing,
-                    everything desires you. The lama meets intuition which is
-                    not simple.
+                    No worries, we constantly looking for people who will help
+                    us as volunteers during the events, workshops and would love
+                    to have you on the team
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
