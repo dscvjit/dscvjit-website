@@ -4,14 +4,8 @@ import contactImage from '../../images/contact.webp';
 class Form extends Component {
   render() {
     return (
-      <section className="contact-area ptb-100">
+      <section className="contact-area">
         <div className="container">
-          <div className="section-title">
-            <h2>Lets Talk !</h2>
-            <div className="bar" />
-            <p>Would like to sponsor an event. Get in touch with us!</p>
-          </div>
-
           <div className="row h-100 justify-content-center align-items-center">
             <div className="col-lg-6 col-md-12">
               <img src={contactImage} alt="image" />
