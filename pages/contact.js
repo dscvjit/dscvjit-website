@@ -11,8 +11,8 @@ class Contact extends Component {
       <>
         <Navbar />
         <Banner />
-        <Content />
         <Form />
+        <Content />
         <Footer />
       </>
     );
