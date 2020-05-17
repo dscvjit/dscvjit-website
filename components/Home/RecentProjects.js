@@ -85,7 +85,9 @@ const RecentProjects = () => {
           </div>
         ) : (
           <div className="row m-0">
-            {display ? (
+            {data.data.length <= 0 ? (
+              <p>No Projects Avaiable Right Now</p>
+            ) : display ? (
               <OwlCarousel
                 className="project-slides owl-carousel owl-theme"
                 {...options}
