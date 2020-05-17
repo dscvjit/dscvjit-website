@@ -69,7 +69,8 @@ img {
 
   }
 }
-.ptb-50{
+
+.ptb-50 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -266,7 +267,7 @@ button {
       height: 100%;
       width: 5px;
       background: $white_color;
-      animation-duration: 2s;
+      animation-duration: 3s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-name: MOVE-BG;
@@ -6390,7 +6391,7 @@ Footer CSS
   font-family: $font_family;
 
   thead {
-    th{
+    th {
       font-weight: 700;
     }
   }
