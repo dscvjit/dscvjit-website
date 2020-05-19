@@ -11,6 +11,24 @@ const Members = (props) => {
   const { data: members, error } = useSWR('/team', fetcher, { membersProps });
   const skeletonArray = Array.from(new Array(4));
 
+  const getRandom = (array) => {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex -= 1
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex]
+    array[currentIndex] = array[randomIndex]
+    array[randomIndex] = temporaryValue
+  }
+  return array
+  }
   return (
     <section className="team-area ptb-100">
       <div className="container">
@@ -51,7 +69,7 @@ const Members = (props) => {
               </div>
             ))
           ) : (
-            members.data.map((member) => (
+            getRandom(members.data).map((member) => (
               <div className="col-lg-3 col-md-6" key={member.id}>
                 <div className="single-team-member">
                   <img src={member.image} alt="team" />
