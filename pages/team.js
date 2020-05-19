@@ -4,6 +4,7 @@ import Footer from '../components/Layouts/Footer';
 import Banner from '../components/Team/Banner';
 import Members from '../components/Team/Members';
 import { getAllTeam } from '../service/service';
+import NoSSR from 'react-no-ssr'
 
 class Team extends React.Component {
   static async getInitialProps(ctx) {
@@ -16,7 +17,9 @@ class Team extends React.Component {
       <>
         <Navbar />
         <Banner />
-        <Members members={this.props.members} />
+        <NoSSR>
+          <Members members={this.props.members} />
+        </NoSSR>
         <Footer />
       </>
     );
