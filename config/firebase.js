@@ -11,10 +11,9 @@ const firebaseConfig = {
   measurementId: 'G-T4C6B4S4P9'
 };
 
+//place the config here
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
-
 export const db = firebase.firestore();
-
 export default firebase;

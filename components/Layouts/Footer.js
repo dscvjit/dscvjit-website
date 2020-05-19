@@ -4,12 +4,29 @@ import dscLogo from '../../images/dsclogo.webp';
 import Subscribe from './Subscribe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Grid } from '@material-ui/core';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import NoSSR from 'react-no-ssr';
 
 class Footer extends Component {
   render() {
+    const url =
+      'https://now.us18.list-manage.com/subscribe/post?u=ee029133db34e212d0c46034f&amp;id=5c571b066e';
+
     return (
       <footer className="footer-area bg-image">
-        <Subscribe />
+        <NoSSR>
+          <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+              <Subscribe
+                status={status}
+                message={message}
+                onSubmitted={(formData) => subscribe(formData)}
+              />
+            )}
+          />
+        </NoSSR>
+
         <div className="container">
           <div className="row">
             <Grid
