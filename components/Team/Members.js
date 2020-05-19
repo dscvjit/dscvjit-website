@@ -6,9 +6,8 @@ import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Members = (props) => {
-  const membersProps = props.members;
   const fetcher = () => getAllTeam();
-  const { data: members, error } = useSWR('/team', fetcher, { membersProps });
+  const { data: members, error } = useSWR('/team', fetcher);
   const skeletonArray = Array.from(new Array(4));
 
   const getRandom = (array) => {
