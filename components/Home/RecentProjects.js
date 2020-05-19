@@ -46,7 +46,7 @@ const RecentProjects = () => {
         <div className="container">
           <div className="section-title">
             <h2>Recent Projects</h2>
-            <div className="bar"></div>
+            <div className="bar" />
             <p>
               The below projects are some of our recent projects in DSC VJIT
             </p>
@@ -86,7 +86,7 @@ const RecentProjects = () => {
         ) : (
           <div className="row m-0">
             {data.data.length <= 0 ? (
-              <p>No Projects Avaiable Right Now</p>
+              <p>No Projects Available Right Now</p>
             ) : display ? (
               <OwlCarousel
                 className="project-slides owl-carousel owl-theme"

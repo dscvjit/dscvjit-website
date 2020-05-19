@@ -1,37 +1,60 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Subscribe extends Component {
-  render() {
-    return (
-      <section className="subscribe-area ptb-50">
-        <div className="container">
-          <div className="section-title">
-            <h2>Subscribe to our newsletter</h2>
-            <div className="bar"></div>
-            <p>
-              By subscribing to the newsletter, you will be able to get constant
-              update regarding workshops, events from us
-            </p>
-          </div>
+const Subscribe = ({ status, message, onSubmitted }) => {
+  const [email, setEmail] = useState('');
 
-          <form className="newsletter-form" data-toggle="validator">
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Your Email Address"
-              name="EMAIL"
-              required={true}
-              autoComplete="off"
-            />
-            <button className="btn btn-primary" type="submit">
-              Subscribe
-            </button>
-            <div id="validator-newsletter" className="form-result"></div>
-          </form>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSubmitted({
+      EMAIL: email
+    });
+  };
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  return (
+    <section className="subscribe-area ptb-50">
+      <div className="container">
+        <div className="section-title">
+          <h2>Subscribe to our newsletter</h2>
+          <div className="bar" />
+          <p>
+            By subscribing to the newsletter, you will be able to get constant
+            update regarding workshops, events from us
+          </p>
         </div>
-      </section>
-    );
-  }
-}
+
+        <form className="newsletter-form" data-toggle="validator">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Your Email Address"
+            name="EMAIL"
+            value={email}
+            required={true}
+            onChange={handleEmailChange}
+            autoComplete="on"
+          />
+          <button
+            className="btn btn-primary"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            {console.log(status)}
+            {!status
+              ? 'Subscribe'
+              : status === 'sending'
+              ? 'Subscribing'
+              : status === 'success'
+              ? 'Subscribed'
+              : 'Error'}
+          </button>
+          <div id="validator-newsletter" className="form-result" />
+        </form>
+      </div>
+    </section>
+  );
+};
 
 export default Subscribe;
