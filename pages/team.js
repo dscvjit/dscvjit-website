@@ -7,10 +7,7 @@ import { getAllTeam } from '../service/service';
 import NoSSR from 'react-no-ssr'
 
 class Team extends React.Component {
-  static async getInitialProps(ctx) {
-    const res = await getAllTeam();
-    return { members: res.data };
-  }
+  
 
   render() {
     return (
@@ -18,7 +15,7 @@ class Team extends React.Component {
         <Navbar />
         <Banner />
         <NoSSR>
-          <Members members={this.props.members} />
+          <Members />
         </NoSSR>
         <Footer />
       </>
