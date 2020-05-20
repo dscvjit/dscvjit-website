@@ -41,7 +41,6 @@ const Subscribe = ({ status, message, onSubmitted }) => {
             type="submit"
             onClick={handleSubmit}
           >
-            {console.log(status)}
             {!status
               ? 'Subscribe'
               : status === 'sending'

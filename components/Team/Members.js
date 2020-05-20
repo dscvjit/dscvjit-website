@@ -1,43 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { getAllTeam } from '../../service/service';
-import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Members = (props) => {
-  const fetcher = () => getAllTeam();
-  const { data: members, error } = useSWR('/team', fetcher);
+const Members = () => {
   const skeletonArray = Array.from(new Array(4));
 
+  const [status, setStatus] = useState('loading');
+  const [teamData, setTeamData] = useState([]);
+
+  useEffect(() => {
+    getAllTeam()
+      .then((res) => {
+        setTeamData(res.data);
+        setStatus(res.status);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const getRandom = (array) => {
-  let currentIndex = array.length,
-    temporaryValue,
-    randomIndex
+    let currentIndex = array.length,
+      temporaryValue,
+      randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex -= 1
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex]
-    array[currentIndex] = array[randomIndex]
-    array[randomIndex] = temporaryValue
-  }
-  return array
-  }
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  };
+
   return (
     <section className="team-area ptb-100">
       <div className="container">
         <div className="row">
-          {error ? (
+          {status === 'error' ? (
             <>
               Unable to fetch the members due to an error:{' '}
-              <strong>{error}</strong>
+              <strong>{teamData}</strong>
             </>
-          ) : !members || members === '' ? (
+          ) : status === 'loading' ? (
             skeletonArray.map((item, index) => (
               <div className="col-lg-3 col-md-6" key={index}>
                 <div className="single-team-member">
@@ -67,8 +79,10 @@ const Members = (props) => {
                 </div>
               </div>
             ))
-          ) : (
-            getRandom(members.data).map((member) => (
+          ) : status === 'empty' ? (
+            <p>No Team members are available right now</p>
+          ) : status === 'success' ? (
+            getRandom(teamData).map((member) => (
               <div className="col-lg-3 col-md-6" key={member.id}>
                 <div className="single-team-member">
                   <img src={member.image} alt="team" />
@@ -107,6 +121,12 @@ const Members = (props) => {
                 </div>
               </div>
             ))
+          ) : (
+            <>
+              {console.log(`Team Data: ${teamData} , Status: ${status}`)}
+              Hey Buddy, you broke the system, use the application in a correct
+              way
+            </>
           )}
         </div>
       </div>
