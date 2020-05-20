@@ -3527,10 +3527,11 @@ Team CSS
 
 
   img {
-    min-height: 255px;
-    max-height: 255px;
+    min-height: 235px;
+    max-height: 235px;
 
     border-radius: 50%;
+    border: $primary solid;
   }
 
   .team-content {
