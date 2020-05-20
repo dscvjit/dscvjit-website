@@ -11,7 +11,7 @@ export const getAllEvents = () => {
         if (doc.empty) {
           resolve({
             success: false,
-            data: {}
+            data: []
           });
         }
         if (Object.keys(doc).length > 0) {
@@ -71,7 +71,7 @@ export const getAllSpeakersFromEvent = (speakersId) => {
           if (doc.empty) {
             resolve({
               success: false,
-              data: {}
+              data: []
             });
           }
           speakers.push(doc.data());
@@ -100,12 +100,11 @@ export const getAllPartnersFromEvent = (partnersId) => {
           if (doc.empty) {
             resolve({
               success: false,
-              data: {}
+              data: []
             });
           }
           partners.push(doc.data());
           if (partners.length === partnersId.length) {
-            console.log('partners: ', partners);
             resolve({
               success: true,
               data: partners
@@ -130,7 +129,7 @@ export const getAllProjects = () => {
         if (doc.empty) {
           resolve({
             success: false,
-            data: {}
+            data: []
           });
         }
         if (Object.keys(doc).length > 0) {
@@ -160,7 +159,7 @@ export const getRecentProjects = () => {
         if (doc.empty) {
           resolve({
             success: false,
-            data: {}
+            data: []
           });
         }
         if (Object.keys(doc).length > 0) {
@@ -220,8 +219,8 @@ export const getAllTeam = () => {
       .then((doc) => {
         if (doc.empty) {
           resolve({
-            success: false,
-            data: {}
+            status: 'empty',
+            data: []
           });
         }
         if (Object.keys(doc).length > 0) {
@@ -229,12 +228,16 @@ export const getAllTeam = () => {
             team.push(res.data());
           });
           resolve({
-            success: true,
+            status: 'success',
             data: team
           });
         }
       })
       .catch((e) => {
+        resolve({
+          status: 'error',
+          data: e.message
+        });
         reject(e);
       });
   });
