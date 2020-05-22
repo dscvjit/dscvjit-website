@@ -892,9 +892,9 @@ $paragraph_color: #818992;
     padding-bottom: 20px;
   }
   .single-team-member {
-    img {
-      min-height: 330px;
-      max-height: 330px;
+    .member-lazy-image {
+      min-height: 180px;
+      max-height: 180px;
     }
 
     .team-content {

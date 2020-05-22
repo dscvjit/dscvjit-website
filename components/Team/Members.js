@@ -3,6 +3,7 @@ import { getAllTeam } from '../../service/service';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Members = () => {
   const skeletonArray = Array.from(new Array(4));
@@ -85,7 +86,19 @@ const Members = () => {
             getRandom(teamData).map((member) => (
               <div className="col-lg-3 col-md-6" key={member.id}>
                 <div className="single-team-member">
-                  <img src={member.image} alt="team" />
+                  <LazyLoadImage
+                    className="member-lazy-image"
+                    src={member.image}
+                    alt={`${member.name} image`}
+                    effect="blur"
+                  />
+                  {/*<img*/}
+                  {/*  className={*/}
+                  {/*    'MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse'*/}
+                  {/*  }*/}
+                  {/*  src={member.image}*/}
+                  {/*  alt={'member'}*/}
+                  {/*/>*/}
 
                   <div className="team-content">
                     <h3>{member.name}</h3>
