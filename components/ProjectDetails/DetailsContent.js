@@ -1,8 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const DetailsContent = ({ project }) => {
   return (
     <section className="project-details-area ptb-50">
@@ -10,7 +9,7 @@ const DetailsContent = ({ project }) => {
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <div className="project-details-image">
-              <img src={project.image} alt="work" />
+              <LazyLoadImage effect={'blur'} src={project.image} alt="work" />
             </div>
           </div>
 
