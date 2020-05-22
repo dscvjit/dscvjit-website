@@ -214,7 +214,7 @@ export const getAllTeam = () => {
   return new Promise((resolve, reject) => {
     db.collection('team')
       .where('visible', '==', true)
-
+      .where('role', 'in', ['Core Team', 'Organizing Team', 'Volunteer'])
       .get()
       .then((doc) => {
         if (doc.empty) {
@@ -230,6 +230,42 @@ export const getAllTeam = () => {
           resolve({
             status: 'success',
             data: team
+          });
+        }
+      })
+      .catch((e) => {
+        resolve({
+          status: 'error',
+          data: e.message
+        });
+        reject(e);
+      });
+  });
+};
+
+export const getAllFaculty = () => {
+  let faculty = [];
+  return new Promise((resolve, reject) => {
+    db.collection('team')
+      .where('visible', '==', true)
+      .where('role', '==', 'Faculty Coordinator')
+      .get()
+
+      .then((doc) => {
+        if (doc.empty) {
+          resolve({
+            status: 'empty',
+            data: []
+          });
+        }
+        if (Object.keys(doc).length > 0) {
+          doc.forEach((res) => {
+            faculty.push(res.data());
+          });
+          console.log('-------------------------------- Faculty, ' + faculty);
+          resolve({
+            status: 'success',
+            data: faculty
           });
         }
       })

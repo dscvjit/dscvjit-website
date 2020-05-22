@@ -4,7 +4,7 @@ import contactImage from '../../images/contact.webp';
 class Form extends Component {
   render() {
     return (
-      <section className="contact-area">
+      <section className="contact-area pt-50">
         <div className="container">
           <div className="row h-100 justify-content-center align-items-center">
             <div className="col-lg-6 col-md-12">
