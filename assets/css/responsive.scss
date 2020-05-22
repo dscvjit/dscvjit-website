@@ -890,11 +890,17 @@ $paragraph_color: #818992;
 
   .team-area {
     padding-bottom: 20px;
+
+    .section-title {
+      h2 {
+        font-size: 20px;
+      }
+    }
   }
   .single-team-member {
     .member-lazy-image {
-      min-height: 180px;
-      max-height: 180px;
+      min-height: 200px;
+      max-height: 200px;
     }
 
     .team-content {
@@ -2520,6 +2526,12 @@ $paragraph_color: #818992;
 
   .team-area {
     padding-bottom: 50px;
+
+    .section-title {
+      h2 {
+
+      }
+    }
   }
 
   .login-image {

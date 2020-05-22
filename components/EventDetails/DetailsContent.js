@@ -310,7 +310,7 @@ const DetailsContent = ({ event }) => {
                   <TableHead>
                     <TableRow>
                       <TableCell>Title</TableCell>
-                      <TableCell>Designation</TableCell>
+                      <TableCell>Description</TableCell>
                       <TableCell>Start Time</TableCell>
                       <TableCell>End Time</TableCell>
                     </TableRow>

@@ -13,7 +13,7 @@ const Content = (props) => {
   });
   const skeletonArray = Array.from(new Array(6));
   return (
-    <section className="project-area ptb-100">
+    <section className="project-area">
       <div className="container">
         <div className="row">
           {!projects ? (

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Content extends Component {
   render() {
     return (
-      <section className="contact-info-area ptb-100">
+      <section className="contact-info-area ptb-50">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-6">
