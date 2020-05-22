@@ -30,6 +30,13 @@ class Banner extends Component {
         <div className="shape9">
           <img src={require('../../images/shape9.svg')} alt="shape" />
         </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <p>By the Students, For the Students</p>
+            </div>
+          </div>
+        </div>
       </section>
     );
   }

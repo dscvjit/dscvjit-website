@@ -5,6 +5,7 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import '../assets/css/style.scss';
 import '../assets/css/responsive.scss';
 import '../assets/css/animate.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { Preloader, Placeholder } from 'react-preloading-screen';
 import App from 'next/app';
@@ -17,7 +18,6 @@ import '../fontAwesome';
 class MyApp extends App {
   render() {
     const { Component, pageProps, store } = this.props;
-
     return (
       <>
         <DefaultSeo

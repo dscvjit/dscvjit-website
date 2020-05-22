@@ -41,6 +41,7 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-image-lightbox": "^5.1.0",
+    "react-lazy-load-image-component": "^1.4.3",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-modal-video": "^1.2.2",
     "react-no-ssr": "^1.1.0",

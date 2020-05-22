@@ -15,6 +15,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const DetailsContent = ({ event }) => {
   const fetchSpeakers = () => getAllSpeakersFromEvent(event['speakers']);
@@ -36,7 +37,11 @@ const DetailsContent = ({ event }) => {
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <div className="project-details-image">
-              <img src={event.image} alt={event.name} />
+              <LazyLoadImage
+                src={event.image}
+                alt={event.name}
+                effect={'blur'}
+              />
             </div>
           </div>
         </div>
@@ -174,7 +179,11 @@ const DetailsContent = ({ event }) => {
                           >
                             <div className="single-project">
                               <div className="project-image">
-                                <img src={speaker.image} alt={speaker.name} />
+                                <LazyLoadImage
+                                  src={speaker.image}
+                                  alt={speaker.name}
+                                  effect={'blur'}
+                                />
                               </div>
                               <div className="speakers-content">
                                 <h3>{speaker.name}</h3>
@@ -274,7 +283,11 @@ const DetailsContent = ({ event }) => {
                                 spacing={1}
                               >
                                 <Grid item>
-                                  <img src={partner.image} alt={partner.name} />
+                                  <LazyLoadImage
+                                    src={partner.image}
+                                    alt={partner.name}
+                                    effect={'blur'}
+                                  />
                                 </Grid>
                                 <Grid item>
                                   <h3>{partner.name}</h3>
@@ -297,7 +310,7 @@ const DetailsContent = ({ event }) => {
                   <TableHead>
                     <TableRow>
                       <TableCell>Title</TableCell>
-                      <TableCell>Designation</TableCell>
+                      <TableCell>Description</TableCell>
                       <TableCell>Start Time</TableCell>
                       <TableCell>End Time</TableCell>
                     </TableRow>

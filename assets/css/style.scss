@@ -3488,6 +3488,18 @@ Team CSS
 =================================================*/
 .team-area {
   padding-bottom: 55px;
+
+  .section-title {
+    padding-top: 10px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .bar {
+      margin-top: 10px;
+    }
+  }
 }
 
 .team-slides {
@@ -3525,6 +3537,19 @@ Team CSS
 
 .single-team-member {
 
+  .member-lazy-image {
+    min-height: 235px;
+    max-height: 235px;
+
+
+    border-radius: 50%;
+    border: $primary solid;
+  }
+
+  .member-lazy-image-wrapper {
+    display: block;
+    margin: auto;
+  }
 
   img {
     min-height: 235px;
@@ -3539,7 +3564,8 @@ Team CSS
     background: $white_color;
     text-align: center;
     border-radius: 5px;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     h3 {
       font: {
@@ -4028,6 +4054,11 @@ Sponsor Logo  CSS
     }
   }
 }
+
+.image-skeleton {
+
+}
+
 
 .sponsor-box {
   display: block;
@@ -6178,9 +6209,6 @@ Error 404 CSS
 /*================================================
 Contact Us CSS
 =================================================*/
-.contact-info-area {
-  border-bottom: 1px solid #eee;
-}
 
 .contact-info-box {
   text-align: center;

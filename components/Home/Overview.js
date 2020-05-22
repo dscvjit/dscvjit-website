@@ -82,7 +82,7 @@ class Overview extends Component {
         <div className="shape3">
           <img src={require('../../images/shape3.png')} alt="img" />
         </div>
-        <div className="bg-gray shape-1"></div>
+        <div className="bg-gray shape-1" />
         <div className="shape6">
           <img src={require('../../images/shape6.png')} alt="img" />
         </div>
