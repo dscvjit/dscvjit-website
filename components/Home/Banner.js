@@ -49,9 +49,12 @@ class Banner extends React.Component {
                         developer are welcome.
                       </p>
 
-                      <Link href="/">
-                        <a className="btn btn-primary">Join DSC VJIT</a>
-                      </Link>
+                      <a
+                        href="https://bit.ly/3efh7Ze"
+                        className="btn btn-primary"
+                      >
+                        Join DSC VJIT
+                      </a>
 
                       <div
                         className="social-icons-list"
