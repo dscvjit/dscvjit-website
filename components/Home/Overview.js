@@ -20,9 +20,9 @@ class Overview extends Component {
                     <h2>Connect With DSC VJIT</h2>
                     <div className="bar" />
                     <p>
-                      Meet other students on campus interested in developer
-                      technologies. All are welcome, including those with
-                      diverse backgrounds and different majors.
+                      Meet other students on campus interested in similar
+                      projects/ technologies. All are welcome, including those
+                      with diverse technical backgrounds and different branches.
                     </p>
                   </div>
                 </div>
