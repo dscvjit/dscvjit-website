@@ -4,9 +4,13 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { Grid } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import useSWR from 'swr';
 
 const Members = () => {
   const skeletonArray = Array.from(new Array(4));
+
+  // const fetcher = () => getAllTeam();
+  // const { data: members, error } = useSWR('/members', fetcher);
 
   const [teamStatus, setTeamStatus] = useState('loading');
   const [facultyStatus, setFacultyStatus] = useState('loading');
@@ -93,7 +97,7 @@ const Members = () => {
               </div>
               <Grid
                 container
-                justify={'space-between'}
+                justify={'space-evenly'}
                 alignItems={'center'}
                 direction={'row'}
               >
