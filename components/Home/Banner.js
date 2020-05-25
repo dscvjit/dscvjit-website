@@ -50,7 +50,7 @@ class Banner extends React.Component {
                       </p>
 
                       <a
-                        href="https://bit.ly/2zstn9Z"
+                        href="https://bit.ly/3efh7Ze"
                         className="btn btn-primary"
                       >
                         Join DSC VJIT
