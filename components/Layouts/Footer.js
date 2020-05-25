@@ -88,7 +88,7 @@ class Footer extends Component {
                           justifyContent: 'center'
                         }}
                       >
-                        <h5>Developed with ❤ by Team Ezerka</h5>
+                        <h5>Developed with ❤ by Team Ezerka </h5>
                       </div>
                     </div>
                   </div>

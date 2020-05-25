@@ -20,9 +20,9 @@ class Technologies extends Component {
               These are some of the technologies we mainly try to focus at DSC
               VJIT
             </p>
-            <a href={'#'} className="btn btn-primary mt-2">
-              Add More
-            </a>
+            {/*<a href={'#'} className="btn btn-primary mt-2">*/}
+            {/*  Add More*/}
+            {/*</a>*/}
           </div>
 
           <div className="row">
