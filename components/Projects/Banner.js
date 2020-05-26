@@ -7,7 +7,8 @@ class Banner extends Component {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h2>Our Awesome Projects</h2>
+              <h2>Our Projects</h2>
+              <a href="https://bit.ly/36tkGsb" className="btn btn-primary">Add your Project</a>
             </div>
           </div>
         </div>
