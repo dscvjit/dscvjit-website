@@ -217,7 +217,7 @@ const Members = () => {
               </div>
               <Grid
                 container
-                justify={'space-between'}
+                justify={'space-evenly'}
                 alignItems={'center'}
                 direction={'row'}
               >
