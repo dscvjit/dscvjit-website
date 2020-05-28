@@ -60,61 +60,87 @@ export const getSpecificEvent = (id) => {
       });
   });
 };
-export const getAllSpeakersFromEvent = (speakersId) => {
-  let speakers = [];
+export const getAllSpeakersFromEvent = (speakerIds) => {
+  const speakers = [];
   return new Promise((resolve, reject) => {
-    for (const speakerId of speakersId) {
+    if (speakerIds.length === 0) {
+      resolve({
+        status: 'empty',
+        data: []
+      });
+    }
+
+    speakerIds.map((id, index) => {
       db.collection('Speakers')
-        .doc(speakerId)
+        .doc(id)
         .get()
         .then((doc) => {
-          if (doc.empty) {
-            resolve({
-              success: false,
-              data: []
-            });
+          if (!doc.empty) {
+            speakers.push(doc.data());
           }
-          speakers.push(doc.data());
-          if (speakers.length === speakersId.length) {
+          if ((speakerIds.length = index + 1)) {
+            if (speakers.length === 0) {
+              resolve({
+                status: 'empty',
+                data: []
+              });
+            }
             resolve({
-              success: true,
+              status: 'success',
               data: speakers
             });
           }
         })
         .catch((e) => {
+          resolve({
+            status: 'error',
+            data: e.message
+          });
           reject(e);
         });
-    }
+    });
   });
 };
 
-export const getAllPartnersFromEvent = (partnersId) => {
-  let partners = [];
+export const getAllPartnersFromEvent = (partnerIds) => {
+  const partners = [];
   return new Promise((resolve, reject) => {
-    for (const partnerId of partnersId) {
+    if (partnerIds.length === 0) {
+      resolve({
+        status: 'empty',
+        data: []
+      });
+      return;
+    }
+    partnerIds.map((id, index) => {
       db.collection('partners')
-        .doc(partnerId)
+        .doc(id)
         .get()
         .then((doc) => {
-          if (doc.empty) {
-            resolve({
-              success: false,
-              data: []
-            });
+          if (!doc.empty) {
+            partners.push(doc.data());
           }
-          partners.push(doc.data());
-          if (partners.length === partnersId.length) {
+          if ((partnerIds.length = index + 1)) {
+            if (partners.length === 0) {
+              resolve({
+                status: 'empty',
+                data: []
+              });
+            }
             resolve({
-              success: true,
+              status: 'success',
               data: partners
             });
           }
         })
         .catch((e) => {
+          resolve({
+            status: 'error',
+            data: e.message
+          });
           reject(e);
         });
-    }
+    });
   });
 };
 
@@ -262,7 +288,6 @@ export const getAllFaculty = () => {
           doc.forEach((res) => {
             faculty.push(res.data());
           });
-          console.log('-------------------------------- Faculty, ' + faculty);
           resolve({
             status: 'success',
             data: faculty
