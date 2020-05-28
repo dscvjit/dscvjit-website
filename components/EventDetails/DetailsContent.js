@@ -4,9 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Skeleton from '@material-ui/lab/Skeleton';
 import {
   getAllSpeakersFromEvent,
-  getAllPartnersFromEvent,
-  getAllTeam,
-  getAllFaculty
+  getAllPartnersFromEvent
 } from '../../service/service';
 
 import Table from '@material-ui/core/Table';
@@ -17,6 +15,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import parse from 'html-react-parser';
 
 const DetailsContent = ({ event }) => {
   const skeletonArray = Array.from(new Array(4));
@@ -131,7 +130,7 @@ const DetailsContent = ({ event }) => {
                   )}
                 </Grid>
               </Grid>
-              <p>{event.des}</p>
+              <p>{parse(event.des)}</p>
 
               {speakerStatus === 'error' ? (
                 <>Error {speakerData}</>
