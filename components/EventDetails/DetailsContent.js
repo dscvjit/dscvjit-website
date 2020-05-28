@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid, Chip } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useSWR from 'swr';
 import Skeleton from '@material-ui/lab/Skeleton';
 import {
   getAllSpeakersFromEvent,
-  getAllPartnersFromEvent
+  getAllPartnersFromEvent,
+  getAllTeam,
+  getAllFaculty
 } from '../../service/service';
 
 import Table from '@material-ui/core/Table';
@@ -18,18 +19,24 @@ import Paper from '@material-ui/core/Paper';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const DetailsContent = ({ event }) => {
-  const fetchSpeakers = () => getAllSpeakersFromEvent(event['speakers']);
-  const fetchPartners = () => getAllPartnersFromEvent(event['partners']);
-
-  const { data: speakers, error: speakersError } = useSWR(
-    '/event/speakers',
-    fetchSpeakers
-  );
-  const { data: partners, error: partnersError } = useSWR(
-    '/events/partners',
-    fetchPartners
-  );
   const skeletonArray = Array.from(new Array(4));
+  const [speakerStatus, setSpeakerStatus] = useState('loading');
+  const [partnerStatus, setPartnerStatus] = useState('loading');
+
+  const [speakerData, setSpeakerData] = useState([]);
+  const [partnerData, setPartnerData] = useState([]);
+
+  useEffect(() => {
+    Promise.all([
+      getAllSpeakersFromEvent(event['speakers']),
+      getAllPartnersFromEvent(event['partners'])
+    ]).then((response) => {
+      setSpeakerData(response[0].data);
+      setSpeakerStatus(response[0].status);
+      setPartnerData(response[1].data);
+      setPartnerStatus(response[1].status);
+    });
+  }, []);
 
   return (
     <section className="project-details-area ptb-100">
@@ -58,8 +65,8 @@ const DetailsContent = ({ event }) => {
                 justify={'flex-start'}
                 spacing={1}
               >
-                {event['hashtags'].map((hashtag) => (
-                  <Grid item>
+                {event['hashtags'].map((hashtag, index) => (
+                  <Grid item key={index}>
                     <Chip
                       variant={'outlined'}
                       className={'hashtag'}
@@ -68,7 +75,6 @@ const DetailsContent = ({ event }) => {
                   </Grid>
                 ))}
               </Grid>
-
               <Grid
                 className="mb-0"
                 container
@@ -90,7 +96,6 @@ const DetailsContent = ({ event }) => {
                   <Grid item>{event.date}</Grid>
                 </Grid>
               </Grid>
-
               <Grid
                 className={'my-0'}
                 container
@@ -99,7 +104,8 @@ const DetailsContent = ({ event }) => {
                 spacing={2}
               >
                 <Grid item>
-                  {event.links.registration !== '' ? (
+                  {event.links.registration &&
+                  event.links.registration !== '' ? (
                     <a
                       href={event.links.registration}
                       target={'_blank'}
@@ -112,7 +118,7 @@ const DetailsContent = ({ event }) => {
                   )}
                 </Grid>
                 <Grid item>
-                  {event.links.registration !== '' ? (
+                  {event.links.event && event.links.event !== '' ? (
                     <a
                       href={event.links.event}
                       target={'_blank'}
@@ -125,11 +131,12 @@ const DetailsContent = ({ event }) => {
                   )}
                 </Grid>
               </Grid>
-
               <p>{event.des}</p>
 
-              {speakersError ? (
-                <>Error {speakersError.message}</>
+              {speakerStatus === 'error' ? (
+                <>Error {speakerData}</>
+              ) : speakerStatus === 'empty' ? (
+                <></>
               ) : (
                 <>
                   <h3 className={'sub-heading'}>Meet the Speakers / Guests</h3>
@@ -140,7 +147,7 @@ const DetailsContent = ({ event }) => {
                     justify={'space-evenly'}
                     spacing={2}
                   >
-                    {!speakers
+                    {speakerStatus === 'loading'
                       ? skeletonArray.map((item, index) => (
                           <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                             <div className="single-project">
@@ -168,7 +175,7 @@ const DetailsContent = ({ event }) => {
                             </div>
                           </Grid>
                         ))
-                      : speakers.data.map((speaker) => (
+                      : speakerData.map((speaker) => (
                           <Grid
                             item
                             lg={4}
@@ -235,9 +242,10 @@ const DetailsContent = ({ event }) => {
                   </Grid>
                 </>
               )}
-
-              {partnersError ? (
-                <>Unable to fetch sponsors Error: {partnersError.message}</>
+              {partnerStatus === 'error' ? (
+                <>Error {partnerData}</>
+              ) : partnerStatus === 'empty' ? (
+                <></>
               ) : (
                 <>
                   <h3 className={'sub-heading'}>Event Partners / Sponsors</h3>
@@ -249,7 +257,7 @@ const DetailsContent = ({ event }) => {
                     justify={'space-evenly'}
                     spacing={2}
                   >
-                    {!partners
+                    {partnerStatus === 'loading'
                       ? skeletonArray.map((item, index) => (
                           <Grid item lg={3} md={4} sm={6} xs={12} key={index}>
                             <Skeleton
@@ -260,7 +268,7 @@ const DetailsContent = ({ event }) => {
                             />
                           </Grid>
                         ))
-                      : partners.data.map((partner) => (
+                      : partnerData.map((partner) => (
                           <Grid
                             item
                             lg={3}
@@ -300,41 +308,47 @@ const DetailsContent = ({ event }) => {
                 </>
               )}
 
-              <h3 className={'sub-heading mt-4 mb-2'}>Event Agenda</h3>
-              <TableContainer component={Paper}>
-                <Table
-                  className="agenda-table"
-                  style={{ minWidth: 650 }}
-                  aria-label="simple table"
-                >
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Title</TableCell>
-                      <TableCell>Description</TableCell>
-                      <TableCell>Start Time</TableCell>
-                      <TableCell>End Time</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {event['agenda'].map((row, index) => (
-                      <TableRow key={index}>
-                        <TableCell component="th" scope="row">
-                          {row['title']}
-                        </TableCell>
-                        <TableCell component="th" scope="row">
-                          {row['des']}
-                        </TableCell>
-                        <TableCell component="th" scope="row">
-                          {row['starttime']}
-                        </TableCell>
-                        <TableCell component="th" scope="row">
-                          {row['endtime']}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
+              {event['agenda'].length <= 0 ? (
+                <></>
+              ) : (
+                <>
+                  <h3 className={'sub-heading mt-4 mb-2'}>Event Agenda</h3>
+                  <TableContainer component={Paper}>
+                    <Table
+                      className="agenda-table"
+                      style={{ minWidth: 650 }}
+                      aria-label="simple table"
+                    >
+                      <TableHead>
+                        <TableRow>
+                          <TableCell>Title</TableCell>
+                          <TableCell>Description</TableCell>
+                          <TableCell>Start Time</TableCell>
+                          <TableCell>End Time</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {event['agenda'].map((row, index) => (
+                          <TableRow key={index}>
+                            <TableCell component="th" scope="row">
+                              {row['title']}
+                            </TableCell>
+                            <TableCell component="th" scope="row">
+                              {row['des']}
+                            </TableCell>
+                            <TableCell component="th" scope="row">
+                              {row['starttime']}
+                            </TableCell>
+                            <TableCell component="th" scope="row">
+                              {row['endtime']}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </>
+              )}
             </div>
           </div>
         </div>
