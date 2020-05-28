@@ -15,7 +15,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import parse from 'html-react-parser';
+import Parse from 'html-react-parser';
 
 const DetailsContent = ({ event }) => {
   const skeletonArray = Array.from(new Array(4));
@@ -130,7 +130,7 @@ const DetailsContent = ({ event }) => {
                   )}
                 </Grid>
               </Grid>
-              <p>{parse(event.des)}</p>
+              <p>{Parse(event.des)}</p>
 
               {speakerStatus === 'error' ? (
                 <>Error {speakerData}</>
