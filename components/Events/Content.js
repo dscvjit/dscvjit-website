@@ -52,7 +52,7 @@ const Content = (props) => {
                   </div>
 
                   <div className="project-content">
-                    <span className="category">Conducted At {event.date}</span>
+                    <span className="category">Event On {event.date}</span>
                     <Grid
                       container
                       alignItems={'center'}
