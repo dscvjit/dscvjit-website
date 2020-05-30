@@ -49,6 +49,7 @@
     "react-owl-carousel3": "^2.2.5",
     "react-preloading-screen": "^1.0.2",
     "react-visibility-sensor": "^5.0.2",
+    "react-ga":"^2.7.0",
     "sass": "^1.26.3",
     "swr": "^0.2.0",
     "wowjs": "^1.1.3"
