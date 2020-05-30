@@ -3,6 +3,7 @@ import { withRouter } from 'next/router';
 import Link from '../../utils/ActiveLink';
 import SearchForm from './SearchForm';
 import dsclogo from '../../images/dsclogo.webp';
+import { initGA, logPageView } from '../../utils/Analytics'
 
 class Navbar extends React.Component {
   _isMounted = false;
@@ -46,6 +47,11 @@ class Navbar extends React.Component {
       }
     });
     window.scrollTo(0, 0);
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
   }
 
   componentWillUnmount() {
