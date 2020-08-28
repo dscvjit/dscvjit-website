@@ -12,3 +12,4 @@ package-lock.json
 
 out/
 
+.env
