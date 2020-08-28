@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  ReactGA.initialize(process.env.REACT_APP_TRACKING_CODE);
+  ReactGA.initialize(process.env.NEXT_PUBLIC_TRACKING_CODE);
 };
 export const logPageView = () => {
   ReactGA.set({ page: window.location.pathname });
