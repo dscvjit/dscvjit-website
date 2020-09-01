@@ -5,7 +5,7 @@ export const getAllEvents = () => {
   return new Promise((resolve, reject) => {
     db.collection('events')
       .where('visible', '==', true)
-
+      .orderBy('date', 'desc')
       .get()
       .then((doc) => {
         if (doc.empty) {
@@ -60,6 +60,7 @@ export const getSpecificEvent = (id) => {
       });
   });
 };
+
 export const getAllSpeakersFromEvent = (speakerIds) => {
   const speakers = [];
   return new Promise((resolve, reject) => {
@@ -71,7 +72,7 @@ export const getAllSpeakersFromEvent = (speakerIds) => {
     }
 
     speakerIds.map((id, index) => {
-      db.collection('Speakers')
+      db.collection('speakers')
         .doc(id)
         .get()
         .then((doc) => {
@@ -149,7 +150,7 @@ export const getAllProjects = () => {
   return new Promise((resolve, reject) => {
     db.collection('projects')
       .where('visible', '==', true)
-
+      .orderBy('date', 'desc')
       .get()
       .then((doc) => {
         if (doc.empty) {
@@ -239,7 +240,6 @@ export const getAllTeam = () => {
   let team = [];
   return new Promise((resolve, reject) => {
     db.collection('team')
-      .where('visible', '==', true)
       .where('role', 'in', ['Core Team', 'Organizing Team', 'Volunteer'])
       .get()
       .then((doc) => {
