@@ -50,7 +50,7 @@
     "react-owl-carousel3": "^2.2.5",
     "react-preloading-screen": "^1.0.2",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.26.10",
+    "sass": "^1.26.11",
     "swr": "^0.3.5",
     "wowjs": "^1.1.3"
   },
