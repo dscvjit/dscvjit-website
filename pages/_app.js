@@ -5,7 +5,7 @@ import '../styles/animate.css';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Preloader, Placeholder } from 'react-preloading-screen';
-import { GoTop, Loader } from '../components/shared';
+import { GoTop, Loader } from '../components/Shared';
 import { NextSeo } from 'next-seo';
 import '../fontAwesome';
 
