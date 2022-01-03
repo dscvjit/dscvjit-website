@@ -98,7 +98,7 @@ const DetailsContent = ({ project }) => {
                     <h4>Developed By: </h4>
                   </Grid>
                   {project['developedBy'].map((member) => (
-                    <Grid item>
+                    <Grid item key={member.id}>
                       <Chip variant={'outlined'} label={member} />
                     </Grid>
                   ))}
@@ -115,7 +115,7 @@ const DetailsContent = ({ project }) => {
                   </Grid>
 
                   {project['supportedBy'].map((member) => (
-                    <Grid item>
+                    <Grid item key={member.id}>
                       <Chip variant={'outlined'} label={member} />
                     </Grid>
                   ))}
