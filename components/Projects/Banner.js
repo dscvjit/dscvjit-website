@@ -8,7 +8,13 @@ class Banner extends Component {
           <div className="row">
             <div className="col-lg-12">
               <h2>Our Projects</h2>
-              <a href="https://bit.ly/36tkGsb" style={{marginTop:'20px'}} className="btn btn-primary">Add your Project</a>
+              <a
+                href="https://bit.ly/36tkGsb"
+                style={{ marginTop: '20px' }}
+                className="btn btn-primary"
+              >
+                Add your Project
+              </a>
             </div>
           </div>
         </div>

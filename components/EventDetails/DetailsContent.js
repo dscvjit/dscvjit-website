@@ -61,7 +61,7 @@ const DetailsContent = ({ event }) => {
                 className={'mb-1'}
                 container
                 alignItems={'center'}
-                justify={'flex-start'}
+                justifyContent={'flex-start'}
                 spacing={1}
               >
                 {event['hashtags'].map((hashtag, index) => (
@@ -78,7 +78,7 @@ const DetailsContent = ({ event }) => {
                 className="mb-0"
                 container
                 direction="row"
-                justify="flex-start"
+                justifyContent="flex-start"
                 alignItems="center"
                 spacing={2}
               >
@@ -99,7 +99,7 @@ const DetailsContent = ({ event }) => {
                 className={'my-0'}
                 container
                 alignItems={'center'}
-                justify={'flex-start'}
+                justifyContent={'flex-start'}
                 spacing={2}
               >
                 <Grid item>
@@ -109,6 +109,7 @@ const DetailsContent = ({ event }) => {
                       href={event.links.registration}
                       target={'_blank'}
                       className="btn btn-primary mb-2"
+                      rel="noreferrer"
                     >
                       Register Now
                     </a>
@@ -122,6 +123,7 @@ const DetailsContent = ({ event }) => {
                       href={event.links.event}
                       target={'_blank'}
                       className="btn btn-secondary mb-2"
+                      rel="noreferrer"
                     >
                       Event Link
                     </a>
@@ -143,7 +145,7 @@ const DetailsContent = ({ event }) => {
                     className={'my-1'}
                     container
                     alignItems="center"
-                    justify={'space-evenly'}
+                    justifyContent={'space-evenly'}
                     spacing={2}
                   >
                     {speakerStatus === 'loading'
@@ -206,6 +208,7 @@ const DetailsContent = ({ event }) => {
                                           <a
                                             href={speaker['socialLinks'][url]}
                                             target={'_blank'}
+                                            rel="noreferrer"
                                           >
                                             {url === 'facebook' ? (
                                               <FontAwesomeIcon
@@ -253,7 +256,7 @@ const DetailsContent = ({ event }) => {
                     container
                     direction={'row'}
                     alignItems={'center'}
-                    justify={'space-evenly'}
+                    justifyContent={'space-evenly'}
                     spacing={2}
                   >
                     {partnerStatus === 'loading'
@@ -276,7 +279,7 @@ const DetailsContent = ({ event }) => {
                             xs={12}
                             container
                             alignItems={'center'}
-                            justify={'center'}
+                            justifyContent={'center'}
                             key={partner.id}
                           >
                             <a
@@ -286,7 +289,7 @@ const DetailsContent = ({ event }) => {
                               <Grid
                                 container
                                 alignItems={'center'}
-                                justify={'space-evenly'}
+                                justifyContent={'space-evenly'}
                                 spacing={1}
                               >
                                 <Grid item>

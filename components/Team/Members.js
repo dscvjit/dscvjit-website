@@ -67,7 +67,7 @@ const Members = () => {
 
                     <Grid
                       container
-                      justify="space-between"
+                      justifyContent="space-between"
                       style={{ paddingTop: '10px' }}
                     >
                       {skeletonArray.map((item, index) => (
@@ -97,7 +97,7 @@ const Members = () => {
               </div>
               <Grid
                 container
-                justify={'space-evenly'}
+                justifyContent={'space-evenly'}
                 alignItems={'center'}
                 direction={'row'}
               >
@@ -111,7 +111,7 @@ const Members = () => {
                     className="single-team-member"
                     key={member.id}
                   >
-                    <Grid item container justify={'center'}>
+                    <Grid item container justifyContent={'center'}>
                       <div>
                         <LazyLoadImage
                           className="member-lazy-image"
@@ -134,6 +134,7 @@ const Members = () => {
                               <a
                                 href={member['socialLinks'][website]}
                                 target={'_blank'}
+                                rel="noreferrer"
                               >
                                 {website === 'facebook' ? (
                                   <FontAwesomeIcon
@@ -187,7 +188,7 @@ const Members = () => {
 
                     <Grid
                       container
-                      justify="space-between"
+                      justifyContent="space-between"
                       style={{ paddingTop: '10px' }}
                     >
                       {skeletonArray.map((item, index) => (
@@ -217,7 +218,7 @@ const Members = () => {
               </div>
               <Grid
                 container
-                justify={'space-evenly'}
+                justifyContent={'space-evenly'}
                 alignItems={'center'}
                 direction={'row'}
               >
@@ -231,7 +232,7 @@ const Members = () => {
                     className="single-team-member"
                     key={member.id}
                   >
-                    <Grid item container justify={'center'}>
+                    <Grid item container justifyContent={'center'}>
                       <div>
                         <LazyLoadImage
                           className="member-lazy-image"
@@ -254,6 +255,7 @@ const Members = () => {
                               <a
                                 href={member['socialLinks'][website]}
                                 target={'_blank'}
+                                rel="noreferrer"
                               >
                                 {website === 'facebook' ? (
                                   <FontAwesomeIcon

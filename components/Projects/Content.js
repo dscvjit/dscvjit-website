@@ -66,7 +66,13 @@ const Content = (props) => {
               </div>
             ))
           ) : (
-            <h4 style={{ marginRight: 'auto', marginLeft: 'auto',marginBottom:"30px" }}>
+            <h4
+              style={{
+                marginRight: 'auto',
+                marginLeft: 'auto',
+                marginBottom: '30px'
+              }}
+            >
               No projects are available right now
             </h4>
           )}

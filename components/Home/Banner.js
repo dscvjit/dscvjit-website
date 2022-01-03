@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import ModalVideo from 'react-modal-video';
 
 import homeImage from '../../images/home.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -144,12 +143,6 @@ class Banner extends React.Component {
             <div className="circle large square4"></div>
           </div>
         </div>
-        <ModalVideo
-          channel="youtube"
-          isOpen={this.state.isOpen}
-          videoId="szuchBiLrEM"
-          onClose={() => this.setState({ isOpen: false })}
-        />
       </React.Fragment>
     );
   }

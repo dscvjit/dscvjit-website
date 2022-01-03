@@ -1,4 +1,5 @@
-class GoTop extends React.Component {
+import { Component } from 'react';
+class GoTop extends Component {
   _isMounted = false;
   constructor(props) {
     super(props);
@@ -52,7 +53,7 @@ class GoTop extends React.Component {
   };
 
   render() {
-    return <React.Fragment>{this.renderGoTopIcon()}</React.Fragment>;
+    return <>{this.renderGoTopIcon()}</>;
   }
 }
 

@@ -32,7 +32,7 @@ class Footer extends Component {
             <Grid
               container
               direction="column"
-              justify={'center'}
+              justifyContent={'center'}
               alignItems={'center'}
               spacing={2}
             >
@@ -75,7 +75,7 @@ class Footer extends Component {
                 </div>
               </Grid>
             </Grid>
-            <Grid container alignItems={'center'} justify={'center'}>
+            <Grid container alignItems={'center'} justifyContent={'center'}>
               <Grid item>
                 <div className="copyright-area" style={{ marginTop: '20px' }}>
                   <div className="container">
