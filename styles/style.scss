@@ -1558,7 +1558,7 @@ Main Banner CSS
   }
 
   &.marketing-home {
-    background: $white_color url("../../images/bg-point.png") no-repeat fixed right -500px center/auto;
+    background: $white_color url("../images/bg-point.png") no-repeat fixed right -500px center/auto;
 
     .hero-content {
       h1 {
@@ -2039,7 +2039,7 @@ Features CSS
   }
 
   &.book-features {
-    background: #F9FAFC url('../../images/bg-point.png') no-repeat fixed right -600px center/ auto;
+    background: #F9FAFC url('../images/bg-point.png') no-repeat fixed right -600px center/ auto;
   }
 }
 
@@ -2342,7 +2342,7 @@ Overview CSS
 .overview-section {
   position: relative;
   z-index: 1;
-  background: #F9FAFC url('../../images/bg-point.png') no-repeat fixed right -600px center/ auto;
+  background: #F9FAFC url('../images/bg-point.png') no-repeat fixed right -600px center/ auto;
 
   .shape7 {
     opacity: 1;
@@ -4173,7 +4173,7 @@ Platform Connect CSS
 Blog CSS
 =================================================*/
 .blog-area {
-  background: #F9FAFC url('../../images/bg-point.png') no-repeat fixed right -600px center/ auto;
+  background: #F9FAFC url('../images/bg-point.png') no-repeat fixed right -600px center/ auto;
 
   &.blog-section {
     background: unset;
@@ -6172,7 +6172,7 @@ Error 404 CSS
     width: 140px;
     height: 140px;
     background: {
-      image: url(../../images/emoji.png);
+      image: url(../images/emoji.png);
       size: cover;
     }
     margin-top: -68px;
@@ -6366,7 +6366,7 @@ Footer CSS
 
   &.bg-image {
     background: {
-      image: url(../../images/footer-shape.png);
+      image: url(../images/footer-shape.png);
       position: center;
       size: cover;
       repeat: no-repeat;

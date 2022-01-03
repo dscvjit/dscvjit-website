@@ -21,7 +21,7 @@ const DetailsContent = ({ project }) => {
                 className="mb-0"
                 container
                 direction="row"
-                justify="flex-start"
+                justifyContent="flex-start"
                 alignItems="center"
                 spacing={1}
               >
@@ -49,7 +49,7 @@ const DetailsContent = ({ project }) => {
                   item
                   container
                   className={'mb-2'}
-                  justify={'flex-start'}
+                  justifyContent={'flex-start'}
                   alignItems="center"
                   direction="row"
                   spacing={2}
@@ -61,6 +61,7 @@ const DetailsContent = ({ project }) => {
                           href={project.links.repo}
                           target={'_blank'}
                           className="btn btn-primary"
+                          rel="noreferrer"
                         >
                           Repo Link
                         </a>
@@ -76,6 +77,7 @@ const DetailsContent = ({ project }) => {
                           href={project.links.demo}
                           target="_blank"
                           className="btn btn-secondary"
+                          rel="noreferrer"
                         >
                           Demo
                         </a>
@@ -96,7 +98,7 @@ const DetailsContent = ({ project }) => {
                     <h4>Developed By: </h4>
                   </Grid>
                   {project['developedBy'].map((member) => (
-                    <Grid item>
+                    <Grid item key={member.id}>
                       <Chip variant={'outlined'} label={member} />
                     </Grid>
                   ))}
@@ -113,7 +115,7 @@ const DetailsContent = ({ project }) => {
                   </Grid>
 
                   {project['supportedBy'].map((member) => (
-                    <Grid item>
+                    <Grid item key={member.id}>
                       <Chip variant={'outlined'} label={member} />
                     </Grid>
                   ))}

@@ -86,7 +86,10 @@ const RecentProjects = () => {
         ) : (
           <div className="row m-0">
             {data.data.length < 1 ? (
-              <div className={"col"} style={{textAlign:"center",marginBottom:"25px"}}>
+              <div
+                className={'col'}
+                style={{ textAlign: 'center', marginBottom: '25px' }}
+              >
                 <p>No Projects Available Right Now</p>
               </div>
             ) : display ? (
